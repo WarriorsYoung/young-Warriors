@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Young Warriors - Empowering young individuals through mentoring, guided meditation, and workshops.">
+	<meta name="keywords" content="young warriors, mentoring, meditation, workshops">
+	
+
+
+	<title>Young Warriors</title>
+
+	<!-- Google Fonts -->
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="owencss.css">
+	<link rel="stylesheet" href="contentpage.html">
+	<link rel="stylesheet" href="bulletpointsowen.html">
+</head>
+
+<body>
+    <!-- Navigation -->
+	
+	
+    <nav class="nav-bar">
+		<a href="#mission"><img src="logo-one.png" alt="logo"></a>
+        <a href="contentpage.html" target="_blank">My Story</a>
+        <a href="bulletpointsowen.html" target="_blank">Mission</a>
+        <a href="#form-style">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+	
+	
+    <div class="image-container">
+        <h1>YOUNG WARRIORS</h1>
+    </div>
+
+	<!-- Scrollable Testimonialy Section -->
+	
+	
+	<div class="scrollable-slider">
+	  <div id="testimony" class="scroll-container">
+		<div class="block">
+		  <video src="testimony1.mov" alt="Testimony" data-description="Testimonial"></video>
+		</div>
+		<div class="block">
+		  <video src="testimony2.mov" alt="Testimony" data-description="Testimonial"></video>
+		</div>
+		<div class="block">
+		  <video src="testimony1.mov" alt="Testimony" data-description="Testimonial"></video>
+		</div>
+		<div class="block">
+		  <video src="testimony2.mov" alt="Testimony" data-description="Testimonial"></video>
+		</div>
+		<div class="block">
+		  <video src="testimony1.mov" alt="Testimony" data-description="Testimonial"></video>
+		</div>
+		
+	  </div>
+</div>
+
+
+	<div id="imageModal" class="modal">
+		<span class="close">&times;</span>
+		<video class="modal-content" id="modalVideo" controls></video>
+		<p id="modalCaption"></p>
+	</div>
+
+
+    <!-- Dropdown for Services -->
+	
+	
+	<div class="dropdown-container">
+        <button class="dropdown-button">Services</button>
+	
+        <div class="dropdown-content" id="dropdown-content">
+			
+           <section id="booking-details">
+				<h2>Booking Details</h2>
+				<ul>
+					<li><strong>Availability:</strong> Monday to Saturday, 10:00 AM to 6:00 PM</li>
+					<li><strong>Cancellation Policy:</strong> Sessions must be canceled or rescheduled 24 hours in advance.</li>
+					<li><strong>Payment:</strong> Required at the time of booking to confirm the session. PayPal, Venmo, CashApp, Apple Cash, etc.</li>
+				</ul>
+
+				<h3>Buy Now</h3>
+				<p>Choose your payment method and complete your booking!</p>
+
+	<!-- PayPal Button -->
+			   
+			   
+				<h3>Dynamic Pricing Calculator</h3>
+				<form id="pricing-form">
+					<label for="session-type">Choose Session Type:</label>
+					<select id="session-type" name="session-type">
+						<option value="mentoring">1-Hour Mentoring Session</option>
+						<option value="guided-meditation">Guided Meditation (45 Minutes)</option>
+						<option value="quick-checkin">Quick Mentoring Check-In (30 Minutes)</option>
+						<option value="custom-session">Custom Session / Workshop</option>
+					</select>
+
+					<div id="session-count-container" style="display: none;">
+						<label for="session-count">Number of Sessions:</label>
+						<input type="number" id="session-count" name="session-count" min="1" value="1">
+					</div>
+
+					<p id="total-price">Total Price: $0</p>
+					<button type="button" id="calculate-price">Calculate Price</button>
+				</form>
+			</section>
+
+			<div id="paypal-button-container"></div>
+        </div>
+    </div>
+
+    <!-- Main Buttons -->
+	
+	
+    <div class="main">
+        <div class="button">
+            <a href="contentpage.html" target="_blank"><button>Who Am I?</button></a>
+        </div>
+        <div class="button">
+            <a href="bulletpointsowen.html" target="_blank"><button>How can I help?</button></a>
+        </div>
+    </div>
+	
+	<!-- Contact Form Section -->
+	
+	
+    <section>
+		<aside class="form-container">
+			<h1>Contact Us</h1>
+
+			<div class="form-container">
+				<form id="form-style">
+					<label for="name">Name:</label>
+					<input type="text" id="nameInput" name="from_name" required autocomplete="name">
+					<br><br>
+					<label for="email">Email:</label>
+					<input type="email" id="emailInput" name="to_email" required placeholder="Your Email">
+					<br><br>
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" required autocomplete="off"></textarea>
+					<br><br>
+					<button type="submit" id="send-button">Send</button>
+				</form>
+			</div>
+		</aside>
+	</section>
+
+    <!-- Footer -->
+	
+	
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <ul>
+                <li><a href="contentpage.html" target="_blank">My Story</a></li>
+                <li><a href="contentpage.html" target="_blank">Mission</a></li>
+                
+				 <p>© 2025 Young Warriors Services. All Rights Reserved. <a href="#" id="terms-link">Service Agreement</a></p>
+            </ul>
+        </div>
+		<div id="terms-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Service Agreement</h2>
+    <p>Service Agreement
+This Service Agreement (the “Agreement”) is entered into between Young Warriors Services, owned by Owen, (hereinafter referred to as “Service Provider,” “we,” or “us”) and you, the client (hereinafter referred to as “Client” or “you”). By purchasing or engaging with our services, you agree to the following terms and conditions:
+
+Services Provided
+
+We offer Young Warriors Services, including guided meditations, personalized mentorship, and growth-focused discussions designed to empower and support your personal journey. Sessions are conducted via phone, Zoom, Google Meet, or similar video conferencing platforms.
+
+Booking and Communication
+
+Confirmation: Clients will receive confirmation emails and/or text messages regarding session details, including the date, time, and virtual meeting link.
+Responsibility: It is the Client’s responsibility to ensure their contact information is accurate to receive all necessary communication.
+Cancellation, No-Show, and Refund Policy
+
+Rescheduling: Sessions may be rescheduled up to 24 hours in advance. Requests must be made via email or text message to support@youngwarriors.com or +1 (234) 567-890.
+Cancellations:
+Client Cancellation: If a session is canceled by the Client less than 24 hours before the scheduled start time, no refund will be issued.
+Service Provider Cancellation: If the Service Provider cancels a session, the Client will be notified at least 24 hours in advance and offered the choice of rescheduling or receiving a full refund.
+No-Show Policy:
+If the Client is more than 15 minutes late without prior notice or a valid emergency, the session will be considered forfeited.
+At the Service Provider’s discretion, the Client may either be issued a reschedule or the session may proceed if no other meetings are scheduled.
+Refund Exceptions: In cases of emergencies (with proof provided), the Client may either receive a refund or reschedule the session at no additional cost. Acceptable proof includes a doctor’s note, hospital discharge papers, or similar documentation.
+Payment and Fees
+
+Payment is due at the time of booking.
+All fees are non-refundable unless otherwise specified in this Agreement.
+Confidentiality
+
+All sessions are private and confidential. The Service Provider will not share any personal information or session details without your explicit consent.
+Clients are encouraged to respect their own privacy and avoid sharing sensitive personal information during sessions.
+Session Recordings
+
+Sessions may be recorded for internal training, quality assurance, or other purposes.
+By participating in the session, the Client consents to the recording of the session.
+Recordings will not be shared publicly without explicit Client consent.
+Technology Requirements
+
+The Client is responsible for ensuring they have access to a stable internet connection and the necessary technology to participate in virtual sessions.
+The Service Provider is not liable for interruptions or cancellations due to the Client’s technological issues.
+Liability Disclaimer
+
+Young Warriors Services are intended to support and empower personal growth but do not replace professional medical, psychological, legal, or financial advice.
+The Service Provider is not liable for any decisions, actions, or outcomes resulting from sessions.
+Code of Conduct
+
+Respectful communication is required during all sessions.
+The Service Provider reserves the right to terminate a session without refund if the Client exhibits inappropriate or disrespectful behavior.
+Legal Jurisdiction
+
+This Agreement shall be governed by and construed in accordance with the laws of the state in which the Service Provider is based. Any disputes arising under this Agreement shall be subject to the exclusive jurisdiction of the courts in that state.
+
+Dispute Resolution
+
+If a dispute arises, both parties agree to attempt to resolve the matter amicably through good-faith discussions.
+If an agreement cannot be reached, disputes may be resolved through mediation or in small claims court, as appropriate.
+Each party shall bear its own legal costs unless otherwise determined by a court.
+Agreement to Terms
+
+By booking a session with Young Warriors Services, you acknowledge that you have read, understood, and agreed to the terms of this Service Agreement. This serves as your digital acknowledgment of the Service Agreement.
+.</p>
+	 <div>
+        <input type="checkbox" id="agreement-checkbox">
+        <label for="agreement-checkbox">I agree to the Service Agreement</label>
+    </div>
+
+    
+   
+
+  
+  </div>
+</div>
+        <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+               
+                <li><a href="bulletpointsowen.html" target="_blank">Consulting</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+                <li>Email: <a href="mailto:info@youngwarriors.com">info@youngwarriors.com</a></li>
+				<li><a href="https://www.tiktok.com/@youngwarriorss8" target="_blank">tiktok.com/youngwarriorss8</a></li>
+				<li><a href="https://www.instagram.com/youngwarriorss8" target="_blank">instagram.com/youngwarriorss8</a></li>
+
+                <li>Phone: <a href="tel:+1234567890">+1 (239)-258-1014</a></li>
+                
+            </ul>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+	
+	
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script src="https://www.paypal.com/sdk/js?client-id=AeSydXX9xqjIyb412RbWQxvejtes8Y_eOtcK7Mea9m3ShotU62IHECPCXEzr1ocGB1FScqyr0KsW9SUk"></script>
+
+	<script src="scriptowen.js"></script>
+	<script src="server.js"></script>
+	
+</body>
+</html> 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    #booking-details {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #booking-details h2, #booking-details h3 {
+      color: #555;
+    }
+
+    #booking-details ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    #booking-details ul li {
+      margin: 10px 0;
+      padding: 5px 0;
+    }
+
+    #pricing-form {
+      margin-top: 20px;
+    }
+
+    #pricing-form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #pricing-form select,
+    #pricing-form input {
+      margin-top: 5px;
+      padding: 8px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    #total-price {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #calculate-price, #paypal-button {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<section id="booking-details">
+  <h2>Booking Details</h2>
+  <ul>
+    <li><strong>Availability:</strong> Monday to Saturday, 10:00 AM to 6:00 PM</li>
+    <li><strong>Cancellation Policy:</strong> Sessions must be canceled or rescheduled 24 hours in advance.</li>
+    <li><strong>Payment:</strong> Required at the time of booking to confirm the session. PayPal, Venmo, CashApp, Apple Cash, etc.</li>
+  </ul>
+<h3>Buy Now</h3>
+  <p>Choose your payment method and complete your booking!</p>
+
+  <!-- PayPal Button -->
+ 
+
+  <h3>Dynamic Pricing Calculator</h3>
+  <form id="pricing-form">
+    <label for="session-type">Choose Session Type:</label>
+    <select id="session-type" name="session-type">
+      <option value="mentoring">1-Hour Mentoring Session</option>
+      <option value="guided-meditation">Guided Meditation (45 Minutes)</option>
+      <option value="quick-checkin">Quick Mentoring Check-In (30 Minutes)</option>
+      <option value="custom-session">Custom Session / Workshop</option>
+    </select>
+
+    <div id="session-count-container" style="display: none;">
+      <label for="session-count">Number of Sessions:</label>
+      <input type="number" id="session-count" name="session-count" min="1" value="1">
+    </div>
+
+    <p id="total-price">Total Price: $0</p>
+    <button type="button" id="calculate-price">Calculate Price</button>
+	   <button id="paypal-button" onclick="handlePayPal()">Buy Now with PayPal</button>
+
+  
+  </form>
+</section>
+<script src="app.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+<div id="paypal-button-container"></div>
+
+<script>
+  const sessionPrices = {
+    mentoring: { single: 150, packages: { 2: 300, 3: 450, 4: 600, 5: 750, 6: 850, 7: 925, 8: 1000 } },
+    "guided-meditation": { single: 75, packages: { 3: 200, 4: 260, 5: 325, 6: 390, 7: 455, 8: 520 } },
+    "quick-checkin": { single: 70 },
+    "custom-session": { single: "Contact for pricing" }
+  };
+
+  const sessionTypeElement = document.getElementById("session-type");
+  const sessionCountContainer = document.getElementById("session-count-container");
+  const sessionCountElement = document.getElementById("session-count");
+  const totalPriceElement = document.getElementById("total-price");
+  const calculatePriceButton = document.getElementById("calculate-price");
+
+  sessionTypeElement.addEventListener("change", function () {
+    const sessionType = sessionTypeElement.value;
+    if (sessionType === "mentoring" || sessionType === "guided-meditation") {
+      sessionCountContainer.style.display = "block";
+    } else {
+      sessionCountContainer.style.display = "none";
+      totalPriceElement.textContent = `Total Price: $${sessionPrices[sessionType].single}`;
+    }
+  });
+
+  calculatePriceButton.addEventListener("click", function () {
+    const sessionType = sessionTypeElement.value;
+    const sessionCount = parseInt(sessionCountElement.value, 10);
+
+    if (sessionType === "custom-session") {
+      totalPriceElement.textContent = "Total Price: Contact for pricing";
+      return;
+    }
+
+    const pricingInfo = sessionPrices[sessionType];
+    if (sessionCount > 1 && pricingInfo.packages && pricingInfo.packages[sessionCount]) {
+      totalPriceElement.textContent = `Total Price: $${pricingInfo.packages[sessionCount]}`;
+    } else {
+      totalPriceElement.textContent = `Total Price: $${sessionCount * pricingInfo.single}`;
+    }
+  });
+	
+	 paypal.Buttons({
+    createOrder: (data, actions) => {
+        return fetch('/create-order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                items: [
+                    { id: 'product1', quantity: 1, price: 50 }
+                ],
+            }),
+        })
+        .then((response) => response.json())
+        .then((order) => order.id);
+    },
+    onApprove: (data, actions) => {
+        return fetch(`/capture-order/${data.orderID}`, {
+            method: 'POST',
+        })
+        .then((response) => response.json())
+        .then((details) => {
+            alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+    },
+    onError: (err) => {
+        console.error('An error occurred:', err);
+    },
+}).render('#paypal-button-container');
+
+</script>
+
+</body>
+</html>

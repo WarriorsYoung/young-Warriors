@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<title>contentpage </title>
+	<style>
+		
+		* {
+			font-size: 16px;
+		}
+		
+		 .nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        padding: 10px 0;
+		height: 50px;
+		box-sizing: border-box;
+		}
+
+    .nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+		.selection-bar {
+			width: 100vw;
+			display: flex;
+			justify-content: space-around;
+			align-items: stretch;
+			text-align: start;
+			gap: 1rem;
+			margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
+		}
+		
+		.selection-bar > div {
+			flex: 1; /* Make all child divs grow equally */
+			min-width: 200px; /* Ensure a minimum width for smaller screens */
+			max-width: 300px; /* Optional: Set a max width to control size */
+			padding: 1rem; /* Add internal spacing for content */
+			border: 1px solid #ccc; /* Optional: Add borders for better visualization */
+			box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+		}
+		
+		.selection-bar h2 {
+			font-size: 1em;
+		}
+		
+		.selection-bar h3 {
+			font-size: 1.5em;
+		}
+		
+		.space-bar {
+			width: 100vw;
+			height: 10px;
+			background-color: white;
+			margin-top: 10px;
+			border-radius: 2%;
+			margin-bottom: 10px;
+		}
+		
+		/* bullet point */
+		.section-first {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			gap: 2rem;
+			text-align: start;
+			align-items: center;
+		}
+		
+		.section-first h2 {
+			text-align: center;
+			align-items: center;
+		}
+		/* bullet point */
+		
+		
+		/* infinity symbol */
+		.section-first ul {
+			list-style: none; /* Remove default bullet points */
+			padding: 0; /* Remove default padding */
+		}
+		.section-first ul li {
+			position: relative;
+			padding-left: 2rem; /* Add space for the infinity symbol */
+			margin-bottom: 15px; /* Add gap between items */
+		}
+		
+		.section-first ul li::before {
+			content: "∞"; /* Add infinity symbol */
+			position: absolute;
+			left: 0; /* Position the symbol to the left of the text */
+			font-size: 1.5rem; /* Adjust size as needed */
+			color: #000; /* Set the color of the symbol */
+		}
+		/* infinity symbol */
+		
+		.section-first-img {
+			width: 50%;
+			flex-shrink: 0; /* Prevent shrinking of the image */
+			align-content: center;
+		}
+		
+		.second-list ul li::before {
+			content: "X"; /* X symbol */
+			color: red; /* Optional: Change color for differentiation */
+		}
+		.quote {
+			font-size: 25px;
+			font-weight: bolder;
+		}
+
+		fieldset {
+			flex: 1; /* Allow the fieldset to grow and fill available space */
+			
+			margin: 0.5rem; /* Add spacing to prevent overlap */
+			position: relative; /* Needed for positioning the legend */
+			padding-top: 1.5rem; /* Add padding to make space for the legend */
+			text-align: center; /* Center align the text */
+			border: none;
+			text-align: start;
+		}
+		
+		
+		legend img {
+			width: 5rem;
+			height: auto;
+		}
+
+		img {
+			width: 100%; /* Make the image responsive */
+			height: auto; /* Maintain aspect ratio */
+		}
+		
+		.section-first a:hover {
+			color: blue; /* Change text color to blue */
+			
+		}
+		
+		a {
+			color: black; /* Default color for links */
+			text-decoration: none; /* Remove underline */
+			font-size: 18px; /* Adjust font size */
+			padding: 10px 20px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav class="nav-bar">
+        <a href="owen.html">Home</a>
+        <a href="#team">Team</a>
+        <a href="owen.html#form-style">Contact</a>
+    </nav>
+
+	<div class="selection-bar">
+		<p class="quote">You are what you experience until you choose otherwise</p>
+	</div>
+	
+	<div class="space-bar"></div>
+	<div class="space-bar"></div>
+	
+	
+	<div class="section-first second-list">
+		<div>
+			<a href="contentpage.html" target="_blank"><h2>Can you relate?</h2></a>
+			<ul>
+				<li>Feeling lost or without purpose?</li>
+				<li>Repeating negative patterns?</li>
+				<li>Struggling with self love/worth?</li>
+				<li>letting the outside bring you down?</li>
+				<li>Lack of connection to the present moment?</li>
+			</ul>
+		</div>
+			
+		<div class="section-first-img">
+		<img src="cave.jpg">
+		</div>
+	</div>
+	
+	
+	<div class="space-bar"></div>
+	<div class="space-bar"></div>
+	
+	
+	<div class="section-first first-list">
+			<div class="section-first-img">
+			<img src="owenflex.jpg">
+			</div>
+			<div>
+				<a href="content2.html" target="blank"><h2>Find your why</h2></a>
+				
+					<ul>
+						<li>Discovering our true purpose</li>
+						<li>Breaking free from old patterns</li>
+						<li>Embracing our intimate truth</li>
+						<li>Owning your intention</li>
+						<li>Living in the present moment</li>
+					</ul>
+				</div>
+	</div>
+	
+	
+	
+</body>
+</html>

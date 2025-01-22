@@ -515,15 +515,7 @@ button:hover {
 
 
 /* Responsive behavior */
-@media (max-width: 768px) {
-  .scroll-container .block {
-    flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
-  }
-	#send-button {
-        width: 100%; /* Ensure the button takes up full width on small screens */
-    }
-	
-}
+
 
 @media (max-width: 480px) {
 		.scroll-container .block {
@@ -553,9 +545,12 @@ button:hover {
 			width: 80%; /* Make buttons a little narrower on smaller screens */
 		}
 			
-		
+		.scroll-container .block {
+		        flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
+		  }
+		#send-button {
+		        width: 100%; /* Ensure the button takes up full width on small screens */
+		    }
 	} 
 
-@media screen and (max-width: 480px) {
- 
-}
+

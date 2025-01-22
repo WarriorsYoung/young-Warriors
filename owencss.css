@@ -520,13 +520,26 @@ button:hover {
 @media (max-width: 480px) {
 		.scroll-container .block {
 		    flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+		}
 	  	h1 {
 		    font-size: 1.5rem; /* Adjust font size for smaller screens */
 		    line-height: 1.2; /* Add line-height for better readability */
 		    word-wrap: break-word; /* Ensure text wraps if too long */
 		    margin: 0.25em;
 		  }
-  }
+  		.image-container h1 {
+		font-family: "Playfair Display", serif;
+		font-weight: 700;
+		color: white;
+		font-size: 2rem;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		text-align: center;
+		position: absolute;
+		line-height: 1; /* Maintain line height */
+		font-stretch: 150%; /* Stretch the width of the font (if supported) */
+		transform: scaleY(3); /* Stretch vertically */
+		display: inline-block; /* Ensure proper scaling */
+	}
 }
 
 /* Responsive Styling for Small Screens */

@@ -516,12 +516,7 @@ button:hover {
 
 /* Responsive behavior */
 @media (max-width: 768px) {
-  .scroll-container .block {
-    flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
-  }
-	#send-button {
-        width: 100%; /* Ensure the button takes up full width on small screens */
-    }
+  
 	
 }
 
@@ -529,6 +524,19 @@ button:hover {
   .scroll-container .block {
     flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
   }
+	.image-container h1 {
+		font-family: "Playfair Display", serif;
+		font-weight: 700;
+		color: white;
+		font-size: 2rem;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		text-align: center;
+		position: absolute;
+		line-height: 1; /* Maintain line height */
+		font-stretch: 150%; /* Stretch the width of the font (if supported) */
+		transform: scaleY(3); /* Stretch vertically */
+		display: inline-block; /* Ensure proper scaling */
+	}
 }
 
 /* Responsive Styling for Small Screens */
@@ -546,4 +554,10 @@ button:hover {
 		.button {
 			width: 80%; /* Make buttons a little narrower on smaller screens */
 		}
+			.scroll-container .block {
+    flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
+  }
+	#send-button {
+        width: 100%; /* Ensure the button takes up full width on small screens */
+    }
 	} 

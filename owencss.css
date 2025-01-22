@@ -537,6 +537,22 @@ button:hover {
 		transform: scaleY(3); /* Stretch vertically */
 		display: inline-block; /* Ensure proper scaling */
 	}
+	.dropdown-button {
+        background-color: #ff5733;
+        color: white;
+		width: 100vw;
+		height: 110px;
+        border: none;
+        padding: 10px 10px;
+        font-size: 2.5rem;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+        text-align: center;
+		max-width: 50px;
+		
+    }
 }
 
 /* Responsive Styling for Small Screens */

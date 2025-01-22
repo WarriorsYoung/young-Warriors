@@ -526,8 +526,14 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  .scroll-container .block {
-    flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+		.scroll-container .block {
+		    flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+	  	h1 {
+		    font-size: 1.5rem; /* Adjust font size for smaller screens */
+		    line-height: 1.2; /* Add line-height for better readability */
+		    word-wrap: break-word; /* Ensure text wraps if too long */
+		    margin: 0.25em;
+		  }
   }
 }
 
@@ -537,7 +543,7 @@ button:hover {
 				flex-direction: column; /* Stack footer content vertically */
 				align-items: center;
 			}
-	.main {
+		.main {
 			flex-direction: column; /* Stack buttons vertically on small screens */
 			gap: 1rem; /* Reduce the gap between buttons on smaller screens */
 			padding: 10px; /* Add padding for better spacing */
@@ -546,4 +552,10 @@ button:hover {
 		.button {
 			width: 80%; /* Make buttons a little narrower on smaller screens */
 		}
+			
+		
 	} 
+
+@media screen and (max-width: 480px) {
+ 
+}

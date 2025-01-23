@@ -122,6 +122,29 @@
 			width: 100%; /* Make the image responsive */
 			height: auto; /* Maintain aspect ratio */
 		}
+
+		.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: auto; 
+		max-width: 200px; /* Limit the button's maximum width */
+		text-align: center;
+	}
+
+	.button button {
+		font-size: 2rem;
+		padding: 15px 30px;
+		background-color: #ff5733;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s, box-shadow 0.3s;
+		width: auto; /* Ensure buttons take up the full width of their container */
+		max-width: 200px;
+	}
 	</style>
 </head>
 

@@ -76,6 +76,8 @@
 			gap: 1rem;
 			text-align: center;
 			align-items: center;
+			background-color: blueviolet;
+			padding: 20px 20px;
 		}
 		
 		.section-first h2 {
@@ -95,25 +97,58 @@
 			gap: 1rem;
 			text-align: center;
 			align-items: center;
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 		
 		
 		
-		.section-first-img {
-			width: 50%;
-			flex-shrink: 0; /* Prevent shrinking of the image */
-			align-content: center;
-		}
+..section-first {
+    display: flex; /* Enable horizontal alignment */
+    align-items: center; /* Vertically align the image and fieldset */
+    justify-content: space-between; /* Space out the image and fieldset */
+    gap: 20px; /* Add spacing between the image and fieldset */
+    padding: 20px; /* Add padding around the section */
+}
+
+.section-first-img img {
+    max-width: 300px; /* Adjust the image width */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Crop the image if needed */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.copy-container {
+    flex: 1; /* Allow the fieldset to take up remaining space */
+    max-width: 400px; /* Set a max width for the fieldset */
+    padding: 20px; /* Add padding inside the fieldset */
+    
+}
+
+.copy-container h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+.copy-container p {
+    font-size: 1.5rem; /* Adjust paragraph size */
+    line-height: 1.5; /* Improve readability */
+}
+
+.logo-img-legend img {
+    max-width: 100px; /* Restrict the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 
 		fieldset {
 			flex: 1; /* Allow the fieldset to grow and fill available space */
-			
+			border: none;
 			margin: 0.5rem; /* Add spacing to prevent overlap */
 			position: relative; /* Needed for positioning the legend */
 			padding-top: 1.5rem; /* Add padding to make space for the legend */
 			text-align: center; /* Center align the text */
-			border: none;
+			
 			text-align: start;
 		}
 		
@@ -123,12 +158,12 @@
 		  align-items: center;
 		  text-align: center;
 		  gap: 0.5rem;
-		  border: 2px solid black;
+		  border: none;
 		  font-size: 5rem;
-		  padding: 0 10px;
-		  font-weight: bold;
+		  padding: 10px 10px;
+		  
 		  background-color: white;
-		  border-radius: 5;
+		  
 		  font-family: "Playfair Display", serif;
 		  font-optical-sizing: auto;
 		  font-weight: 900;
@@ -168,6 +203,11 @@
 		width: auto; /* Ensure buttons take up the full width of their container */
 		max-width: 200px;
 	}
+		
+		ul li {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    line-height: 1.5; /* Optional: Improves readability */
+}
 	</style>
 </head>
 
@@ -197,12 +237,15 @@
 	<div class="space-bar"></div>
 	<div class="space-bar"></div>
 	
+	
+	
 	<div class="section-first">
-			<div class="section-first-img">
-			<img src="owenedit4.jpg">
-			</div>
 		
-			<fieldset>
+		<div class="section-first-img">
+			<img src="owenedit4.jpg">
+		</div>
+		
+			<fieldset class="copy-container">
 			  <legend class="logo-img-legend">
 				<img src="logo-one.png" alt="logo">
 			  </legend>
@@ -213,6 +256,8 @@
 			</fieldset>
 		
 	</div>
+	
+	
 	<div class="space-bar"></div>
 	<div class="space-bar"></div>
 	
@@ -229,9 +274,14 @@
 		</div>
 			</fieldset>
 		<div class="section-first-img">
-		<img src="woods.png">
+			<img src="owenedit3.jpg">
 		</div>
 	</div>
+	
+	
+	
+	
+	
 	<div class="space-bar"></div>
 	<div class="space-bar"></div>
 	

@@ -12,7 +12,6 @@
 		* {
 			font-size: 16px;
 		}
-		
 		 .nav-bar {
         position: fixed;
         top: 0;
@@ -23,9 +22,7 @@
         background-color: rgba(0, 0, 0, 0.8);
         z-index: 1000;
         padding: 10px 0;
-		height: 50px;
-		box-sizing: border-box;
-		}
+    }
 
     .nav-bar a {
         color: white;
@@ -33,6 +30,12 @@
         font-size: 18px;
         padding: 10px 20px;
     }
+	
+	.nav-bar img {
+		width: 4rem;
+	}
+
+		
 		.selection-bar {
 			width: 100vw;
 			display: flex;
@@ -76,6 +79,7 @@
 			gap: 1rem;
 			text-align: center;
 			align-items: center;
+			background-color: blueviolet;
 			padding: 20px 20px;
 		}
 		
@@ -207,6 +211,66 @@
     font-size: 1.5rem; /* Adjust the size as needed */
     line-height: 1.5; /* Optional: Improves readability */
 }
+		
+		@media (max-width: 480px) {
+  .scroll-container .block {
+    flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+  }
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: auto; 
+		max-width: 100px; /* Limit the button's maximum width */
+		text-align: center;
+	}
+	
+	.dropdown-container {
+        text-align: center;
+        margin: 20px 0;
+		max-width: 50vw;
+    }
+	button, .dropdown-button {
+		font-family: 'Playfair Display', serif;
+
+		padding: 10px 20px;
+
+		border-radius: 5px;
+		font-size: 1rem;
+		color: white;
+		cursor: pointer;
+		position: relative; /* Needed for animation positioning */
+		opacity: 0; /* Start with invisible */
+		transform: translateX(-100%); /* Start off-screen to the left */
+		transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+		max-width: 100px;
+	}
+}
+
+/* Responsive Styling for Small Screens */
+		@media (max-width: 768px) {
+	.footer {
+				flex-direction: column; /* Stack footer content vertically */
+				align-items: center;
+			}
+	.main {
+			flex-direction: column; /* Stack buttons vertically on small screens */
+			gap: 1rem; /* Reduce the gap between buttons on smaller screens */
+			padding: 10px; /* Add padding for better spacing */
+			
+		}
+
+	.button {
+			width: 80%; /* Make buttons a little narrower on smaller screens */
+		}
+			.scroll-container .block {
+			flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
+		  }
+	#send-button {
+				width: 100%; /* Ensure the button takes up full width on small screens */
+			}
+	
+	} 
 	</style>
 </head>
 

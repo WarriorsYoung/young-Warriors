@@ -578,12 +578,16 @@ button:hover {
     }
 
     .nav-bar a {
-        font-size: 22px; /* Make links even larger */
+         color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
         padding: 20px 30px; /* Further increase padding */
     }
 
     .nav-bar img {
-        width: 8rem; /* Further increase logo size */
+         max-width: 100px; /* Adjust as needed */
+    height: auto;
     }
 }
 
@@ -611,16 +615,28 @@ button:hover {
 			#send-button {
 		        	width: 100%; /* Ensure the button takes up full width on small screens */
 		    }
+			 nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px;
+    }
 			.nav-bar {
         padding: 15px 0; /* Increase padding for better visibility */
     }
 
     .nav-bar a {
-        font-size: 20px; /* Make links larger */
+        
         padding: 15px 25px; /* Increase padding for better spacing */
+	    margin: 5px 0; /* Stack links with vertical spacing */
+        font-size: 18px; /* Slightly increase font size for readability */
+    }
+
+	    
     }
 
     .nav-bar img {
-        width: 6rem; /* Increase logo size */
+       
+	    margin-bottom: 10px; /* Add spacing between items */
+        max-width: 80px; /* Scale down image */
     }
-			} 
+			 

@@ -12,28 +12,28 @@
 		* {
 			font-size: 16px;
 		}
-		 .nav-bar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1000;
-        padding: 10px 0;
-    }
+		.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 10px 0;
+}
 
-    .nav-bar a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px 20px;
-    }
-	
-	.nav-bar img {
-		width: 4rem;
-	}
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.nav-bar img {
+    width: 4rem;
+}
 
 		
 		.selection-bar {
@@ -79,7 +79,7 @@
 			gap: 1rem;
 			text-align: center;
 			align-items: center;
-			background-color: none;
+			background-color: blueviolet;
 			padding: 20px 20px;
 		}
 		
@@ -271,6 +271,36 @@
 			}
 	
 	} 
+		
+		@media (max-width: 768px) {
+    .nav-bar {
+        padding: 15px 0; /* Increase padding for better visibility */
+    }
+
+    .nav-bar a {
+        font-size: 20px; /* Make links larger */
+        padding: 15px 25px; /* Increase padding for better spacing */
+    }
+
+    .nav-bar img {
+        width: 6rem; /* Increase logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 20px 0; /* Further increase padding */
+    }
+
+    .nav-bar a {
+        font-size: 22px; /* Make links even larger */
+        padding: 20px 30px; /* Further increase padding */
+    }
+
+    .nav-bar img {
+        width: 8rem; /* Further increase logo size */
+    }
+}
 	</style>
 </head>
 

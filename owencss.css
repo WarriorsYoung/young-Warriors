@@ -619,6 +619,8 @@ button:hover {
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start */
         padding: 10px;
+				 position: fixed; /* Keeps it scrolling with the viewport */
+    top: 0;
     }
 			.nav-bar {
         padding: 15px 0; /* Increase padding for better visibility */

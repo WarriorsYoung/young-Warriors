@@ -573,7 +573,18 @@ button:hover {
 		transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 		max-width: 100px;
 	}
-}
+ .nav-bar {
+        padding: 20px 0; /* Further increase padding */
+    }
+
+    .nav-bar a {
+        font-size: 22px; /* Make links even larger */
+        padding: 20px 30px; /* Further increase padding */
+    }
+
+    .nav-bar img {
+        width: 8rem; /* Further increase logo size */
+    }
 }
 
 
@@ -600,4 +611,16 @@ button:hover {
 			#send-button {
 		        	width: 100%; /* Ensure the button takes up full width on small screens */
 		    }
+			.nav-bar {
+        padding: 15px 0; /* Increase padding for better visibility */
+    }
+
+    .nav-bar a {
+        font-size: 20px; /* Make links larger */
+        padding: 15px 25px; /* Increase padding for better spacing */
+    }
+
+    .nav-bar img {
+        width: 6rem; /* Increase logo size */
+    }
 			} 

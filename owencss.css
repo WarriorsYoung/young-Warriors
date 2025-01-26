@@ -592,6 +592,7 @@ button:hover {
 		
 			.button {
 				width: 50%; /* Make buttons a little narrower on smaller screens */
+				font-size: 1rem;
 				}
 			.scroll-container .block {
 			        flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */

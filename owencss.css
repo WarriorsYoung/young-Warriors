@@ -529,14 +529,16 @@ button:hover {
 	    display: flex;
 	    flex-wrap: wrap;
 	    justify-content: center;
+	    align-items: flex-start;
+            gap: 10px;
+            min-height: 100px; /* Prevent container collapse */
+            overflow: visible;
 	}
 	
   	.scroll-container .block {
-    		flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
-		max-width: 100%; /* Ensure video scales to fit */
-	        height: auto;
-	        padding: 0; /* Remove any padding */
-	        margin: 0 auto; /* Center video horizontally */
+    		flex: 0 0 100%; /* Force each video to take full row width */
+        	margin: 10px;
+        	box-sizing: border-box;
   	}
 	
 	
@@ -548,8 +550,9 @@ button:hover {
 	    transition: transform 0.3s ease-in-out;
  	    border-radius: 15px;
 	    opacity: 1; /* Ensure full visibility */
-    	    visibility: visible;
-}
+    	    visibility: visible !important;
+	    margin: 0 auto;
+	}
 
 	.button {
 		display: flex;

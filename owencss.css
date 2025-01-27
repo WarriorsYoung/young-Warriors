@@ -533,7 +533,10 @@ button:hover {
 	
   	.scroll-container .block {
     		flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
-		margin: 10px;
+		max-width: 100%; /* Ensure video scales to fit */
+	        height: auto;
+	        padding: 0; /* Remove any padding */
+	        margin: 0 auto; /* Center video horizontally */
   	}
 	
 	

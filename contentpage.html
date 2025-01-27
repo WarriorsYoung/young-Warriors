@@ -79,7 +79,7 @@
 			gap: 1rem;
 			text-align: center;
 			align-items: center;
-			
+			background-color: none;
 			padding: 20px 20px;
 		}
 		
@@ -269,23 +269,34 @@
 	#send-button {
 				width: 100%; /* Ensure the button takes up full width on small screens */
 			}
+			
+			.nav-bar {
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Align items to the start */
+				
+				position: static;
+    			top: 0;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.8);
+				color: white;
+				height: auto;
+				 
+    }
+			
+
+			.nav-bar a {
+
+
+				margin: 5px 0; /* Stack links with vertical spacing */
+				font-size: 25px; /* Slightly increase font size for readability */
+			}
+		}
+
 	
-	} 
+	 
 		
-		@media (max-width: 768px) {
-    .nav-bar {
-        padding: 15px 0; /* Increase padding for better visibility */
-    }
+	
 
-    .nav-bar a {
-        font-size: 20px; /* Make links larger */
-        padding: 15px 25px; /* Increase padding for better spacing */
-    }
-
-    .nav-bar img {
-        width: 6rem; /* Increase logo size */
-    }
-}
 
 @media (max-width: 480px) {
     .nav-bar {

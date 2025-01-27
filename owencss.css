@@ -590,6 +590,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: 3rem;
   }
 }
 
@@ -612,17 +613,16 @@ button:hover {
 				font-size: 1rem;
 				}
 			.scroll-container .block {
-			        flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
-				  }
+		    		flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+		  	}
 			#send-button {
 		        	width: 100%; /* Ensure the button takes up full width on small screens */
 		    }
 			 .nav-bar {
 				flex-direction: column; /* Stack items vertically */
 				align-items: center; /* Align items to the start */
-				
 				position: static;
-    			top: 0;
+    				top: 0;
 				text-align: center;
 				background-color: rgba(0, 0, 0, 0.8);
 				color: white;

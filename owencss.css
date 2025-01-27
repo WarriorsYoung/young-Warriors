@@ -517,27 +517,17 @@ button:hover {
 
 
 @media (max-width: 480px) {
-  	
-  .scroll-container {
-    display: flex; /* Ensure container is flexible */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  }
-
-  .scroll-container .block {
-    flex: 0 0 100%; /* 1 block per row */
-    margin-bottom: 10px; /* Add spacing */
-  }
-
-  .scroll-container .block video {
-    max-width: 100%; /* Allow video to adjust based on container width */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 15px; /* Rounded corners */
-    display: block; /* Ensure video is visible */
-  }
+  	.scroll-container .block {
+    		flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+  	}
+	
+	.scroll-container .block video {
+  max-width: 100px; /* Adjust to preferred size */
+  height: auto; 
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
 }
-
 
 	.button {
 		display: flex;
@@ -579,14 +569,15 @@ button:hover {
 	
 	
 	.nav-bar {
-		flex-direction: column; /* Stack items vertically */
-		align-items: center; /* Align items to the start */
-		position: static;
-    		top: 0;
-		text-align: center;
-		background-color: rgba(0, 0, 0, 0.8);
-		color: white;
-		height: auto;
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Align items to the start */
+
+				position: static;
+    			top: 0;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.8);
+				color: white;
+				height: auto;
 		
     }
 
@@ -599,8 +590,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0 auto;
-    padding: 0px 20px;
   }
 }
 
@@ -631,8 +620,9 @@ button:hover {
 			 .nav-bar {
 				flex-direction: column; /* Stack items vertically */
 				align-items: center; /* Align items to the start */
+				
 				position: static;
-    				top: 0;
+    			top: 0;
 				text-align: center;
 				background-color: rgba(0, 0, 0, 0.8);
 				color: white;

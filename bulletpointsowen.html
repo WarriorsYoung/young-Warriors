@@ -38,7 +38,7 @@
 			display: flex;
 			justify-content: space-around;
 			align-items: stretch;
-			text-align: start;
+			text-align: center;
 			gap: 1rem;
 			margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
 		}
@@ -52,13 +52,7 @@
 			box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
 		}
 		
-		.selection-bar h2 {
-			font-size: 1em;
-		}
 		
-		.selection-bar h3 {
-			font-size: 1.5em;
-		}
 		
 		.space-bar {
 			width: 100vw;
@@ -82,26 +76,34 @@
 		.section-first h2 {
 			text-align: center;
 			align-items: center;
+			font-size: 2.25rem;
 		}
-		/* bullet point */
 		
 		
-		/* infinity symbol */
+		
 		.section-first ul {
 			list-style: none; /* Remove default bullet points */
 			padding: 0; /* Remove default padding */
+			font-size: 2rem;
+			line-height: 1.6; 
 		}
 		.section-first ul li {
 			position: relative;
-			padding-left: 2rem; /* Add space for the infinity symbol */
-			margin-bottom: 15px; /* Add gap between items */
+			padding-left: 2.5rem; /* Add space for the infinity symbol */
+			margin-bottom: 10px;
+			font-size: 1.25rem;
+			
 		}
+		
+		
 		
 		.section-first ul li::before {
 			content: "∞"; /* Add infinity symbol */
 			position: absolute;
 			left: 0; /* Position the symbol to the left of the text */
-			font-size: 1.5rem; /* Adjust size as needed */
+			transform: translateY(-50%);
+			top: 50%;
+			font-size: 2rem; /* Adjust size as needed */
 			color: #000; /* Set the color of the symbol */
 		}
 		/* infinity symbol */
@@ -110,15 +112,22 @@
 			width: 50%;
 			flex-shrink: 0; /* Prevent shrinking of the image */
 			align-content: center;
+			
+		}
+		
+		.section-first-img img{
+			border-radius: 15px;
+			
 		}
 		
 		.second-list ul li::before {
 			content: "X"; /* X symbol */
-			color: red; /* Optional: Change color for differentiation */
+			color: black; /* Optional: Change color for differentiation */
 		}
 		.quote {
-			font-size: 25px;
+			font-size: 3rem;
 			font-weight: bolder;
+			padding: 0 10px;
 		}
 
 		fieldset {
@@ -136,6 +145,7 @@
 		legend img {
 			width: 5rem;
 			height: auto;
+			
 		}
 
 		img {
@@ -154,15 +164,79 @@
 			font-size: 18px; /* Adjust font size */
 			padding: 10px 20px;
 		}
+		
+		
+.section-first div p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left */
+	padding: 0 20px;
+}
+
+ 		
+		@media (max-width: 480px) {
+    .section-first {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .section-first ul {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .section-first ul li {
+        padding-left: 0; /* Remove space for the infinity symbol */
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+
+    .section-first-img {
+        width: 100%; /* Make the image take full width */
+        margin-top: 1rem; /* Add some space between text and image */
+    }
+
+    .section-first-img img {
+        width: 100%; /* Ensure the image takes full width of its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+			
+	
+}
+		
+		@media (max-width: 768px) {
+			.nav-bar {
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Align items to the start */
+				
+				position: static;
+    			top: 0;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.8);
+				color: white;
+				height: auto;
+				 
+    }
+			
+
+    .nav-bar a {
+        
+        
+	    margin: 5px 0; /* Stack links with vertical spacing */
+        font-size: 25px; /* Slightly increase font size for readability */
+    }
+			}
+
 
 	</style>
 </head>
 
 <body>
 	<nav class="nav-bar">
-        <a href="index.html">Home</a>
-        <a href="contentpage.html">Team</a>
-        <a href="index.html#form-style">Contact</a>
+        <a href="owen.html">Home</a>
+        <a href="#team">Team</a>
+        <a href="owen.html#form-style">Contact</a>
     </nav>
 
 	<div class="selection-bar">
@@ -175,7 +249,7 @@
 	
 	<div class="section-first second-list">
 		<div>
-			<a href="contentpage.html" target="_blank"><h2>Can you relate?</h2></a>
+			<h2>Can you relate?</h2>
 			<ul>
 				<li>Feeling lost or without purpose?</li>
 				<li>Repeating negative patterns?</li>
@@ -200,7 +274,7 @@
 			<img src="owenflex.jpg">
 			</div>
 			<div>
-				<a href="content2.html" target="blank"><h2>Find your why</h2></a>
+				<h2>Find your why</h2>
 				
 					<ul>
 						<li>Discovering our true purpose</li>
@@ -212,7 +286,32 @@
 				</div>
 	</div>
 	
+	<div class="space-bar"></div>
+	<div class="space-bar"></div>
 	
+	<div class="section-first first-list">
+			<div class="section-first-img">
+			<img src="owen6.jpg">
+			</div>
+			<div>
+				<h2>Does this feel like you?</h2>
+				<p>
+            Many people begin their journey feeling: unworthy, overwhelmed or lost. 
+            Stuck in limiting beliefs and old patterns. 
+            Disconnected from their purpose, unsure of where to turn. 
+            Controlled by external circumstances. Struggling to break free.<br>
+        
+            At 11 years old I felt this too. My life took a big turn when my brother, my rock, got into legal trouble. 
+            A void opened that led to depression, feelings of abandonment and disempowerment. Seeking support from my parents only deepened the pain. 
+            My left without telling me, and my parents divorced, leaving me feeling completely abandoned. I turned to addictions to fill the void. 
+            Not realizing the answers I sought were within me.
+        </p>
+					
+				</div>
+	</div>
+	
+	
+
 	
 </body>
 </html>

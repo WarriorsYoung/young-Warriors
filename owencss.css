@@ -517,16 +517,28 @@ button:hover {
 
 
 @media (max-width: 480px) {
+
+	.scroll-container {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	}
+	
   	.scroll-container .block {
     		flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+		margin: 10px;
   	}
 	
+	
+
 	.scroll-container .block video {
-  max-width: 100px; /* Adjust to preferred size */
-  height: auto; 
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 15px;
+	    max-width: 100%; /* Allow video to scale within its container */
+	    height: auto; 
+	    display: block; /* Ensure it is rendered as a block-level element */
+	    transition: transform 0.3s ease-in-out;
+ 	    border-radius: 15px;
+	    opacity: 1; /* Ensure full visibility */
+    	    visibility: visible;
 }
 
 	.button {

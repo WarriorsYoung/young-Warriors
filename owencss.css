@@ -522,7 +522,7 @@ button:hover {
   	}
 	
 	.scroll-container .block video {
-  max-width: 100px; /* Adjust to preferred size */
+  max-width: 50px; /* Adjust to preferred size */
   height: auto; 
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -569,15 +569,14 @@ button:hover {
 	
 	
 	.nav-bar {
-				flex-direction: column; /* Stack items vertically */
-				align-items: center; /* Align items to the start */
-
-				position: static;
-    			top: 0;
-				text-align: center;
-				background-color: rgba(0, 0, 0, 0.8);
-				color: white;
-				height: auto;
+		flex-direction: column; /* Stack items vertically */
+		align-items: center; /* Align items to the start */
+		position: static;
+    		top: 0;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+		height: auto;
 		
     }
 
@@ -590,6 +589,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 0 auto;
+    padding: 0px 20px;
   }
 }
 
@@ -620,9 +621,8 @@ button:hover {
 			 .nav-bar {
 				flex-direction: column; /* Stack items vertically */
 				align-items: center; /* Align items to the start */
-				
 				position: static;
-    			top: 0;
+    				top: 0;
 				text-align: center;
 				background-color: rgba(0, 0, 0, 0.8);
 				color: white;

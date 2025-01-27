@@ -542,27 +542,12 @@ button:hover {
 		transform: scaleY(3); /* Stretch vertically */
 		display: inline-block; /* Ensure proper scaling */
 	}
-	.dropdown-button {
-	        background-color: #ff5733;
-	        color: white;
-			width: 50vw;
-			height: 110px;
-	        border: none;
-	        padding: 10px 10px;
-	        font-size: 1rem;
-	        cursor: pointer;
-	        border-radius: 5px;
-	        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-	        transition: background-color 0.3s;
-	        text-align: center;
-			max-width: 50px;
-			
-	    }
+	
 	button, .dropdown-button {
 		font-family: 'Playfair Display', serif;
-
+		background-color: #ff5733;
 		padding: 10px 20px;
-
+		text-align: center;
 		border-radius: 5px;
 		font-size: 1rem;
 		color: white;
@@ -572,10 +557,11 @@ button:hover {
 		transform: translateX(-100%); /* Start off-screen to the left */
 		transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 		max-width: 100px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
 	}
  .nav-bar {
         padding: 20px 0; /* Further increase padding */
-	 height: 2rem;
+	 height: auto;
     }
 
     .nav-bar a {
@@ -584,6 +570,7 @@ button:hover {
     margin: 0 10px;
     font-size: 18px;
         padding: 20px 30px; /* Further increase padding */
+		
     }
 
     .nav-bar img {
@@ -616,16 +603,15 @@ button:hover {
 			#send-button {
 		        	width: 100%; /* Ensure the button takes up full width on small screens */
 		    }
-			 nav {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-        padding: 10px;
-				 position: fixed; /* Keeps it scrolling with the viewport */
-    top: 0;
+			 .nav-bar {
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Align items to the start */
+				
+				position: static;
+    			top: 0;
+				text-align: center;
     }
-			.nav-bar {
-        padding: 15px 0; /* Increase padding for better visibility */
-    }
+			
 
     .nav-bar a {
         

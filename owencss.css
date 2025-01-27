@@ -543,7 +543,7 @@ button:hover {
 	    display: block; /* Ensure it is rendered as a block-level element */
 	    transition: transform 0.3s ease-in-out;
  	    border-radius: 15px;
-	    opacity: 1; /* Ensure full visibility */
+	    opacity: 1 !important;
     	    visibility: visible !important;
 	    margin: 0 auto;
 	}

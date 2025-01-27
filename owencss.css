@@ -577,6 +577,25 @@ button:hover {
          max-width: 100px; /* Adjust as needed */
     height: auto;
     }
+
+.image-container h1 {
+    display: flex; /* Flex for vertical stacking */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center the text vertically */
+    align-items: center; /* Center the text horizontally */
+    text-align: center; /* Center text alignment */
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    line-height: 1; /* Ensure compact vertical spacing */
+    font-stretch: 150%; /* Stretch font width */
+    transform: scaleY(3); /* Stretch vertically */
+    margin: 0; /* Remove default margins */
+    position: relative; /* Optional: Keep positioned relative to container */
+}
+
 }
 
 

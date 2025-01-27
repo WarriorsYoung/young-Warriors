@@ -517,7 +517,7 @@ button:hover {
 
 
 @media (max-width: 480px) {
-  	@media (max-width: 480px) {
+  	
   .scroll-container {
     display: flex; /* Ensure container is flexible */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */

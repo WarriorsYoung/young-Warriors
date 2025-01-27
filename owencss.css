@@ -590,7 +590,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
+		overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
   }
 }
 

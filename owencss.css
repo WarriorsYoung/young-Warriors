@@ -518,13 +518,7 @@ button:hover {
 
 @media (max-width: 480px) {
 
-	.scroll-container {
-    border: 2px solid red; /* Debugging aid */
-}
-
-.scroll-container .block video {
-    border: 2px solid blue; /* Debugging aid */
-}
+	
 	.scroll-container {
 	    display: flex;
 	    flex-wrap: wrap;

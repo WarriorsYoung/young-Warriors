@@ -575,6 +575,7 @@ button:hover {
 	}
  .nav-bar {
         padding: 20px 0; /* Further increase padding */
+	 height: 2rem;
     }
 
     .nav-bar a {

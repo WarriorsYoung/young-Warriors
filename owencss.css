@@ -587,7 +587,7 @@ button:hover {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     line-height: 1; /* Ensure compact vertical spacing */
     font-stretch: 150%; /* Stretch font width */

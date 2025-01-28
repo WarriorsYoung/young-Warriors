@@ -555,7 +555,7 @@ button:hover {
 		justify-content: center;
 		align-items: center;
 		width: auto; 
-		max-width: 100%; /* Limit the button's maximum width */
+		max-width: 100px; /* Limit the button's maximum width */
 		text-align: center;
 	}
 	

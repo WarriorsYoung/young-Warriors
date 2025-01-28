@@ -520,14 +520,19 @@ button:hover {
 
 	
 	.scroll-container {
-	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: center;
-	    align-items: flex-start;
-            gap: 10px;
-            min-height: 100px; /* Prevent container collapse */
-            overflow: visible;
-	}
+        display: flex;
+        flex-wrap: nowrap; /* Keep videos in a single row */
+        justify-content: flex-start; /* Align items to the left */
+        align-items: center; /* Center items vertically */
+        gap: 10px; /* Space between videos */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Prevent vertical scrolling */
+        max-height: 250px; /* Maintain container height */
+        width: 100%; /* Ensure container spans the full width */
+        box-sizing: border-box; /* Include padding in width/height */
+        padding: 5px; /* Adjust padding for small screens */
+    }
+
 	
   	.scroll-container .block {
     		flex: 0 0 100%; /* Force each video to take full row width */
@@ -537,23 +542,20 @@ button:hover {
 	
 	
 
-	.scroll-container .block video {
-	    max-width: 100%; /* Allow video to scale within its container */
-	    height: auto; 
-	    display: block; /* Ensure it is rendered as a block-level element */
-	    transition: transform 0.3s ease-in-out;
- 	    border-radius: 15px;
-	    opacity: 1 !important;
-    	    visibility: visible !important;
-	    margin: 0 auto;
-	}
+	    .scroll-container .block video {
+        width: auto; /* Ensure videos keep their natural width */
+        max-width: 100%; /* Prevent videos from overflowing horizontally */
+        max-height: 200px; /* Maintain aspect ratio and height constraints */
+        border-radius: 10px; /* Adjust styling for small screens */
+    }
+
 
 	.button {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: auto; 
-		max-width: 100px; /* Limit the button's maximum width */
+		max-width: 100%; /* Limit the button's maximum width */
 		text-align: center;
 	}
 	

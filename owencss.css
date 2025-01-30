@@ -629,9 +629,37 @@ button:hover {
 				width: 50%; /* Make buttons a little narrower on smaller screens */
 				font-size: 1rem;
 				}
-			.scroll-container .block {
-		    		flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
-		  	}
+			
+
+			.scroll-container {
+        display: flex;
+        flex-wrap: nowrap; /* Keep videos in a single row */
+        justify-content: flex-start; /* Align items to the left */
+        align-items: center; /* Center items vertically */
+        gap: 10px; /* Space between videos */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Prevent vertical scrolling */
+        max-height: 250px; /* Maintain container height */
+        width: 100%; /* Ensure container spans the full width */
+        box-sizing: border-box; /* Include padding in width/height */
+        padding: 5px; /* Adjust padding for small screens */
+    }
+
+	
+  	.scroll-container .block {
+    		flex: 0 0 100%; /* Force each video to take full row width */
+        	margin: 10px;
+        	box-sizing: border-box;
+  	}
+	
+	
+
+	    .scroll-container .block video {
+        width: auto; /* Ensure videos keep their natural width */
+        max-width: 100%; /* Prevent videos from overflowing horizontally */
+        max-height: 200px; /* Maintain aspect ratio and height constraints */
+        border-radius: 10px; /* Adjust styling for small screens */
+    }
 			#send-button {
 		        	width: 100%; /* Ensure the button takes up full width on small screens */
 		    }

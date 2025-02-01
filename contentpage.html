@@ -265,7 +265,10 @@
 			padding-top: 20px;        /* Optional spacing for button */
 		}
 
-			
+			footer p, footer a {
+    font-size: 1.5em; /* Increase font size on small screens */
+    margin: 15px 0; /* Add space between footer items */
+  }
 			
 			
 			
@@ -273,12 +276,7 @@
 				flex-direction: column; /* Stack footer content vertically */
 				align-items: center;
 			}
-			.main {
-				flex-direction: column; /* Stack buttons vertically on small screens */
-				gap: 1rem; /* Reduce the gap between buttons on smaller screens */
-				padding: 10px; /* Add padding for better spacing */
-				font-size: 1rem;
-				}
+			
 		
 			.button {
 				width: 50%; /* Make buttons a little narrower on smaller screens */
@@ -314,19 +312,19 @@
         max-width: 80px; /* Scale down image */
     }
 		}
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center the items horizontally */
+  }
 
-		@media (max-width: 768px) {
-			.footer {
-				flex-direction: column; /* Stack footer content vertically */
-				align-items: center;
-			}
-			.main {
-				flex-direction: column; /* Stack buttons vertically on small screens */
-				gap: 1rem; /* Reduce the gap between buttons on smaller screens */
-				padding: 10px; /* Add padding for better spacing */
-				font-size: 1rem;
-				}
-		}
+  footer p, footer a {
+    font-size: 1.5em; /* Increase font size on small screens */
+    margin: 15px 0; /* Add space between footer items */
+  }
+}
+		
 	</style>
 </head>
 
@@ -412,7 +410,7 @@
 			<fieldset>
 				<legend><img src="logo-one.png" alt="logo"></legend>
 			<div>
-				<h2>Real change starts here...</h2>
+				<h2>Real change start here...</h2>
 				
 					<ul>
 						<li>What if the world isn’t against you, but simply reflecting the energy you’re putting out?</li>

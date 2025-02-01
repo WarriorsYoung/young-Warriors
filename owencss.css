@@ -492,7 +492,8 @@ button:hover {
   border-radius: 15px;
 	opacity: 1 !important;
     visibility: visible !important;
-
+	 position: relative;
+    z-index: 10; /* Bring it to the front */
 }
 
 .scroll-container .block video:hover {

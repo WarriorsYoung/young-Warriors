@@ -255,25 +255,64 @@
 		}
 
 		@media (max-width: 480px) {
-			.scroll-container .block {
-				flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
-			}
-
-			.button {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: auto; 
-				max-width: 100px; /* Limit the button's maximum width */
-				text-align: center;
-			}
 			
-			.dropdown-container {
-				text-align: center;
-				margin: 20px 0;
-				max-width: 50vw;
-				width: auto;
+			
+			.footer-column .button {
+			display: flex;
+			justify-content: center;  /* Center the button horizontally */
+			align-items: center;      /* Center the button vertically */
+			width: 100%;              /* Ensure button takes the full width */
+			padding-top: 20px;        /* Optional spacing for button */
+		}
+
+			
+			
+			
+			
+			.footer {
+				flex-direction: column; /* Stack footer content vertically */
+				align-items: center;
 			}
+			.main {
+				flex-direction: column; /* Stack buttons vertically on small screens */
+				gap: 1rem; /* Reduce the gap between buttons on smaller screens */
+				padding: 10px; /* Add padding for better spacing */
+				font-size: 1rem;
+				}
+		
+			.button {
+				width: 50%; /* Make buttons a little narrower on smaller screens */
+				font-size: 1rem;
+				}
+			
+			 .nav-bar {
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Align items to the start */
+				position: static;
+    				top: 0;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.8);
+				color: white;
+				height: auto;
+				 
+    }
+			
+
+    .nav-bar a {
+        
+        
+	    margin: 5px 0; /* Stack links with vertical spacing */
+        font-size: 25px; /* Slightly increase font size for readability */
+    }
+
+	    
+    }
+
+    .nav-bar img {
+       
+	    margin-bottom: 10px; /* Add spacing between items */
+        max-width: 80px; /* Scale down image */
+    }
 		}
 	</style>
 </head>

@@ -200,28 +200,16 @@
 			line-height: 1.5; /* Optional: Improves readability */
 		}
 
-		footer {
-  display: flex;
-  flex-direction: row; /* Keep elements horizontal by default */
-  justify-content: space-around; /* Distribute space between items */
-  padding: 20px;
-  background-color: #333;
-}
-
-footer div {
-  margin: 10px;
-}
-
-footer p, footer a {
-  font-size: 1em; /* Default font size */
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+		.footer {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;  /* Ensure equal spacing between columns */
+			align-items: flex-start;
+			flex-wrap: wrap;
+			text-align: center;
+		}
 
 		.footer-column {
 			flex: 1;
@@ -438,7 +426,7 @@ footer a:hover {
 	<footer class="footer">
     <div class="footer-column">
         <div class="button">
-            <a href="index.html#form-style" target="_blank"><button>Start Now</button></a>
+            <a href="index.html#form-style" target="_blank"><button>Starts Now</button></a>
         </div>
     </div>
     <div class="footer-column">

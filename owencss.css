@@ -563,12 +563,13 @@ button:hover {
 	
 
 	        .scroll-container .block video {
-        width: 100%;         /* Make video responsive */
+        width: 100% !important;         /* Make video responsive */
         max-width: 180px;    /* Set a max size for consistency */
         max-height: 200px;   /* Ensure aspect ratio */
         border-radius: 10px; /* Keep styling clean */
         display: block;      /* Prevent inline spacing issues */
 			border: 2px solid blue;
+			height: auto !important;
     }
 
 

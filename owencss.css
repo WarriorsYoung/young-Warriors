@@ -525,18 +525,19 @@ button:hover {
 
 	
 	.scroll-container {
-	background-color: red;
+	
         display: flex;
         flex-wrap: nowrap;  /* Keep videos in a single row */
         overflow-x: auto;    /* Enable horizontal scrolling */
         overflow-y: hidden;  /* Prevent vertical scrolling */
         gap: 10px;           /* Space between videos */
         padding: 10px;       /* Adjust padding */
-        max-height: 250px;   /* Prevent container from collapsing */
+        max-height: none;   /* Prevent container from collapsing */
         width: 100%;         /* Full width */
         box-sizing: border-box; /* Include padding in width */
         scroll-snap-type: x mandatory; /* Smooth scrolling */
         -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+	
     }
 
 	

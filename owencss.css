@@ -413,6 +413,7 @@ button:hover {
   max-height: 80%;
 }
 
+
 #terms-link {
     color: white;
 }
@@ -433,7 +434,12 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
 }
-
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* Scrollable container styles */
 .scroll-container {
   

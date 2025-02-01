@@ -540,6 +540,14 @@ button:hover {
 	
     }
 
+	.scroll-container video {
+    display: block !important;  /* Ensure it's treated as a block element */
+    visibility: visible !important; /* Force visibility */
+    opacity: 1 !important;  /* Ensure it's not hidden */
+    width: 100%;  /* Adjust width to container */
+    max-width: 180px; /* Prevent overflow */
+    max-height: 200px; /* Keep a consistent size */
+}
 	
   	.scroll-container .block {
     		flex: 0 0 auto; /* Force each video to take full row width */

@@ -8,33 +8,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <title>contentpage </title>
 	<style>
-		
 		* {
 			font-size: 16px;
 		}
 		.nav-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    padding: 10px 0;
-}
+			position: fixed;
+			top: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.8);
+			z-index: 1000;
+			padding: 10px 0;
+		}
 
-.nav-bar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-}
+		.nav-bar a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 10px 20px;
+		}
 
-.nav-bar img {
-    width: 4rem;
-}
-
+		.nav-bar img {
+			width: 4rem;
+		}
 		
 		.selection-bar {
 			width: 100vw;
@@ -45,7 +43,7 @@
 			gap: 1rem;
 			margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
 		}
-		
+
 		.selection-bar > div {
 			flex: 1; /* Make all child divs grow equally */
 			min-width: 200px; /* Ensure a minimum width for smaller screens */
@@ -63,15 +61,15 @@
 		.selection-bar h3 {
 			font-size: 1.5em;
 		}
-		
+
 		.space-bar {
 			width: 100vw;
 			height: 10px;
-			
 			margin-top: 10px;
 			border-radius: 2%;
 			margin-bottom: 10px;
 		}
+
 		.section-first {
 			display: flex;
 			justify-content: center;
@@ -82,7 +80,7 @@
 			background-color: none;
 			padding: 20px 20px;
 		}
-		
+
 		.section-first h2 {
 			display: flex;
 			justify-content: center;
@@ -92,7 +90,7 @@
 			align-items: center;
 			font-size: 1.5rem;
 		}
-		
+
 		.section-first p {
 			display: flex;
 			justify-content: center;
@@ -102,47 +100,42 @@
 			align-items: center;
 			font-size: 1.5rem;
 		}
-		
-		
-		
-..section-first {
-    display: flex; /* Enable horizontal alignment */
-    align-items: center; /* Vertically align the image and fieldset */
-    justify-content: space-between; /* Space out the image and fieldset */
-    gap: 20px; /* Add spacing between the image and fieldset */
-    padding: 20px; /* Add padding around the section */
-}
 
-.section-first-img img {
-    max-width: 300px; /* Adjust the image width */
-    height: auto; /* Maintain the image's aspect ratio */
-    object-fit: cover; /* Crop the image if needed */
-    border-radius: 10px; /* Optional: Add rounded corners */
-}
+		.section-first {
+			display: flex; /* Enable horizontal alignment */
+			align-items: center; /* Vertically align the image and fieldset */
+			justify-content: space-between; /* Space out the image and fieldset */
+			gap: 20px; /* Add spacing between the image and fieldset */
+			padding: 20px; /* Add padding around the section */
+		}
 
-.copy-container {
-    flex: 1; /* Allow the fieldset to take up remaining space */
-    max-width: 400px; /* Set a max width for the fieldset */
-    padding: 20px; /* Add padding inside the fieldset */
-    
-}
+		.section-first-img img {
+			max-width: 300px; /* Adjust the image width */
+			height: auto; /* Maintain the image's aspect ratio */
+			object-fit: cover; /* Crop the image if needed */
+			border-radius: 10px; /* Optional: Add rounded corners */
+		}
 
-.copy-container h2 {
-    font-size: 1.5rem; /* Adjust heading size */
-    margin-bottom: 10px; /* Add space below the heading */
-}
+		.copy-container {
+			flex: 1; /* Allow the fieldset to take up remaining space */
+			max-width: 400px; /* Set a max width for the fieldset */
+			padding: 20px; /* Add padding inside the fieldset */
+		}
 
-.copy-container p {
-    font-size: 1.5rem; /* Adjust paragraph size */
-    line-height: 1.5; /* Improve readability */
-}
+		.copy-container h2 {
+			font-size: 1.5rem; /* Adjust heading size */
+			margin-bottom: 10px; /* Add space below the heading */
+		}
 
-.logo-img-legend img {
-    max-width: 100px; /* Restrict the logo size */
-    height: auto; /* Maintain aspect ratio */
-}
+		.copy-container p {
+			font-size: 1.5rem; /* Adjust paragraph size */
+			line-height: 1.5; /* Improve readability */
+		}
 
-
+		.logo-img-legend img {
+			max-width: 100px; /* Restrict the logo size */
+			height: auto; /* Maintain aspect ratio */
+		}
 
 		fieldset {
 			flex: 1; /* Allow the fieldset to grow and fill available space */
@@ -151,29 +144,25 @@
 			position: relative; /* Needed for positioning the legend */
 			padding-top: 1.5rem; /* Add padding to make space for the legend */
 			text-align: center; /* Center align the text */
-			
-			text-align: start;
 		}
-		
+
 		legend {
-		  display: flex;
-		  flex-direction: column; /* Stack image and text */
-		  align-items: center;
-		  text-align: center;
-		  gap: 0.5rem;
-		  border: none;
-		  font-size: 5rem;
-		  padding: 10px 10px;
-		  
-		  background-color: white;
-		  
-		  font-family: "Playfair Display", serif;
-		  font-optical-sizing: auto;
-		  font-weight: 900;
-		  font-style: normal;
-		  border-radius: 5%;
+			display: flex;
+			flex-direction: column; /* Stack image and text */
+			align-items: center;
+			text-align: center;
+			gap: 0.5rem;
+			border: none;
+			font-size: 5rem;
+			padding: 10px 10px;
+			background-color: white;
+			font-family: "Playfair Display", serif;
+			font-optical-sizing: auto;
+			font-weight: 900;
+			font-style: normal;
+			border-radius: 5%;
 		}
-		
+
 		legend img {
 			width: 5rem;
 			height: auto;
@@ -185,143 +174,107 @@
 		}
 
 		.button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: auto; 
-		max-width: 200px; /* Limit the button's maximum width */
-		text-align: center;
-	}
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%; /* Allow the button container to take full width */
+			text-align: center;
+		}
 
-	.button button {
-		font-size: 2rem;
-		padding: 15px 30px;
-		background-color: #ff5733;
-		color: white;
-		border: none;
-		border-radius: 10px;
-		cursor: pointer;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-		transition: transform 0.3s, box-shadow 0.3s;
-		width: auto; /* Ensure buttons take up the full width of their container */
-		max-width: 200px;
-	}
-		
+		.button button {
+			font-size: 2rem;
+			padding: 15px 30px;
+			background-color: #ff5733;
+			color: white;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s, box-shadow 0.3s;
+			width: auto;
+			max-width: none; /* Remove max-width restriction */
+		}
+
 		ul li {
-    font-size: 1.5rem; /* Adjust the size as needed */
-    line-height: 1.5; /* Optional: Improves readability */
-}
-		
+			font-size: 1.5rem; /* Adjust the size as needed */
+			line-height: 1.5; /* Optional: Improves readability */
+		}
+
+		.footer {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;  /* Ensure equal spacing between columns */
+			align-items: flex-start;
+			flex-wrap: wrap;
+			text-align: center;
+		}
+
+		.footer-column {
+			flex: 1;
+			min-width: 250px;
+			padding: 10px;
+			margin-bottom: 20px;
+			text-align: center;  /* Center text inside each column */
+		}
+
+		.footer-column .button {
+			display: flex;
+			justify-content: center;  /* Center the button horizontally */
+			align-items: center;      /* Center the button vertically */
+			width: 100%;              /* Ensure button takes the full width */
+			padding-top: 20px;        /* Optional spacing for button */
+		}
+
+		.footer-column h3 {
+			margin-bottom: 10px;
+			font-size: 1.2rem;
+			border-bottom: 2px solid white;
+			padding-bottom: 5px;
+			text-align: center;  /* Ensure the h3 is centered in the column */
+		}
+
+		.footer-column ul {
+			list-style: none;
+			padding: 0;  /* Remove default padding */
+		}
+
+		.footer-column ul li {
+			margin-bottom: 8px;
+		}
+
+		.footer-column ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 1rem;
+		}
+
+		.footer-column ul li a:hover {
+			text-decoration: underline;
+		}
+
 		@media (max-width: 480px) {
-  .scroll-container .block {
-    flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
-  }
-	.button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: auto; 
-		max-width: 100px; /* Limit the button's maximum width */
-		text-align: center;
-	}
-	
-	.dropdown-container {
-        text-align: center;
-        margin: 20px 0;
-		max-width: 50vw;
-    }
-	button, .dropdown-button {
-		font-family: 'Playfair Display', serif;
-
-		padding: 10px 20px;
-
-		border-radius: 5px;
-		font-size: 1rem;
-		color: white;
-		cursor: pointer;
-		position: relative; /* Needed for animation positioning */
-		opacity: 0; /* Start with invisible */
-		transform: translateX(-100%); /* Start off-screen to the left */
-		transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-		max-width: 100px;
-	}
-
-	.nav-bar {
-		flex-direction: column; /* Stack items vertically */
-		align-items: center; /* Align items to the start */
-		position: static;
-    		top: 0;
-		text-align: center;
-		background-color: rgba(0, 0, 0, 0.8);
-		color: white;
-		height: auto;
-}
-
-/* Responsive Styling for Small Screens */
-		@media (max-width: 768px) {
-	.footer {
-				flex-direction: column; /* Stack footer content vertically */
-				align-items: center;
-			}
-	.main {
-			flex-direction: column; /* Stack buttons vertically on small screens */
-			gap: 1rem; /* Reduce the gap between buttons on smaller screens */
-			padding: 10px; /* Add padding for better spacing */
-			
-		}
-
-	.button {
-			width: 80%; /* Make buttons a little narrower on smaller screens */
-		}
 			.scroll-container .block {
-			flex: 0 0 calc(50% - 20px); /* 2 videos per row for smaller screens */
-		  }
-	#send-button {
-				width: 100%; /* Ensure the button takes up full width on small screens */
+				flex: 0 0 calc(100% - 20px); /* 1 video per row for extra-small screens */
+			}
+
+			.button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: auto; 
+				max-width: 100px; /* Limit the button's maximum width */
+				text-align: center;
 			}
 			
-			.nav-bar {
-				flex-direction: column; /* Stack items vertically */
-				align-items: center; /* Align items to the start */
-				
-				position: static;
-    			top: 0;
+			.dropdown-container {
 				text-align: center;
-				background-color: rgba(0, 0, 0, 0.8);
-				color: white;
-				height: auto;
-				 
-    }
-			
-
-			.nav-bar a {
-
-
-				margin: 5px 0; /* Stack links with vertical spacing */
-				font-size: 25px; /* Slightly increase font size for readability */
+				margin: 20px 0;
+				max-width: 50vw;
+				width: auto;
 			}
 		}
-
-	
-	 
-		
-	
-
-
-@media (max-width: 480px) {
-    .nav-bar {
-        padding: 20px 0; /* Further increase padding */
-    }
-
-    .nav-bar a {
-        font-size: 22px; /* Make links even larger */
-        padding: 20px 30px; /* Further increase padding */
-    }
-
-    .nav-bar img {
-        width: 8rem; /* Further increase logo size */
-    }
-}
 	</style>
 </head>
 
@@ -420,9 +373,29 @@
 			</div>
 		</fieldset>
 	</div>
-	
-	 <div class="button">
+	<footer class="footer">
+    <div class="footer-column">
+        <div class="button">
             <a href="index.html#form-style" target="_blank"><button>Start Now</button></a>
         </div>
+    </div>
+    <div class="footer-column">
+        <h3>About Us</h3>
+        <ul>
+            <li><a href="contentpage.html" target="_blank">My Story</a></li>
+            <li><a href="contentpage.html" target="_blank">Mission</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+            <li>Email: <a href="mailto:info@youngwarriors.com">info@youngwarriors.com</a></li>
+            <li><a href="https://www.tiktok.com/@youngwarriorss8" target="_blank">tiktok.com/youngwarriorss8</a></li>
+            <li><a href="https://www.instagram.com/youngwarriorss8" target="_blank">instagram.com/youngwarriorss8</a></li>
+            <li>Phone: <a href="tel:+12392581014">+1 (239)-258-1014</a></li>
+        </ul>
+    </div>
+</footer>
+	 
 </body>
 </html>

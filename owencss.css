@@ -525,19 +525,20 @@ button:hover {
 
 	
 	.scroll-container {
-	
+	border: 2px solid red;
         display: flex;
         flex-wrap: nowrap;  /* Keep videos in a single row */
         overflow-x: auto;    /* Enable horizontal scrolling */
-        overflow-y: hidden;  /* Prevent vertical scrolling */
+         overflow-y: visible !important;
         gap: 10px;           /* Space between videos */
         padding: 10px;       /* Adjust padding */
         max-height: none;   /* Prevent container from collapsing */
         width: 100%;         /* Full width */
         box-sizing: border-box; /* Include padding in width */
-        scroll-snap-type: x mandatory; /* Smooth scrolling */
+        scroll-snap-type: none; /* Smooth scrolling */
         -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
-	
+	min-height: 150px !important;  /* Prevent collapsing */
+
     }
 
 	.scroll-container video {
@@ -553,8 +554,10 @@ button:hover {
     		flex: 0 0 auto; /* Force each video to take full row width */
         	margin: 10px;
         	box-sizing: border-box;
-		 min-width: 150px;    /* Ensure each video has a minimum width */
+		 
         max-width: 100%;     /* Prevent stretching */
+		 position: relative !important; /* Prevent absolute positioning issues */
+    min-width: 180px; /* Ensure videos are not shrinking too small */
   	}
 	
 	
@@ -565,6 +568,7 @@ button:hover {
         max-height: 200px;   /* Ensure aspect ratio */
         border-radius: 10px; /* Keep styling clean */
         display: block;      /* Prevent inline spacing issues */
+			border: 2px solid blue;
     }
 
 

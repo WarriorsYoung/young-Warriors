@@ -306,13 +306,26 @@
     }
 
 	    
-    }
+    
 
     .nav-bar img {
        
 	    margin-bottom: 10px; /* Add spacing between items */
         max-width: 80px; /* Scale down image */
     }
+		}
+
+		@media (max-width: 768px) {
+			.footer {
+				flex-direction: column; /* Stack footer content vertically */
+				align-items: center;
+			}
+			.main {
+				flex-direction: column; /* Stack buttons vertically on small screens */
+				gap: 1rem; /* Reduce the gap between buttons on smaller screens */
+				padding: 10px; /* Add padding for better spacing */
+				font-size: 1rem;
+				}
 		}
 	</style>
 </head>

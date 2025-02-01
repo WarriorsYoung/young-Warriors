@@ -443,8 +443,8 @@ button:hover {
   scroll-behavior: smooth;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
+  min-height: 400px;
   
-  height: auto;
  max-height: none; /* Remove constraints */
 }
 
@@ -475,7 +475,10 @@ button:hover {
   cursor: pointer;
   border-radius: 15px;
   transition: transform 0.3s ease-in-out;
-  
+  display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
 }
 
 .scroll-container video:hover {

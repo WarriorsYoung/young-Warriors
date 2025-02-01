@@ -1,315 +1,271 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<title>contentpage </title>
-	<style>
-		* {
-			font-size: 18px;
-		}
-		.nav-bar {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			background-color: rgba(0, 0, 0, 0.8);
-			z-index: 1000;
-			padding: 10px 0;
-		}
+<title>Content Page</title>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 18px;
+	}
 
-		.nav-bar a {
-			color: white;
-			text-decoration: none;
-			font-size: 18px;
-			padding: 10px 20px;
-		}
+	/* Navigation Bar */
+	.nav-bar {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 1000;
+		padding: 10px 0;
+	}
 
-		.nav-bar img {
-			width: 4rem;
-		}
-		
-		.selection-bar {
-			width: 100vw;
-			display: flex;
-			justify-content: space-around;
-			align-items: stretch;
-			text-align: start;
-			gap: 1rem;
-			margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
-		}
+	.nav-bar a {
+		color: white;
+		text-decoration: none;
+		font-size: 18px;
+		padding: 10px 20px;
+	}
 
-		.selection-bar > div {
-			flex: 1; /* Make all child divs grow equally */
-			min-width: 200px; /* Ensure a minimum width for smaller screens */
-			max-width: 300px; /* Optional: Set a max width to control size */
-			padding: 1rem; /* Add internal spacing for content */
-			border: 1px solid #ccc; /* Optional: Add borders for better visualization */
-			box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
-		}
-		
-		.selection-bar h2 {
-			font-size: 2em;
-			text-decoration: none;
-		}
-		
-		.selection-bar h3 {
-			font-size: 1.5em;
-		}
+	.nav-bar img {
+		width: 4rem;
+	}
 
-		.space-bar {
-			width: 100vw;
-			height: 10px;
-			margin-top: 10px;
-			border-radius: 2%;
-			margin-bottom: 10px;
-		}
+	/* Selection Bar */
+	.selection-bar {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: stretch;
+		text-align: start;
+		gap: 1rem;
+		margin-top: calc(50px + 10px); /* Height of nav-bar + 10px padding */
+	}
 
-		.section-first {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 1rem;
-			text-align: center;
-			align-items: center;
-			background-color: none;
-			padding: 20px 20px;
-		}
+	.selection-bar > div {
+		flex: 1;
+		min-width: 200px;
+		max-width: 300px;
+		padding: 1rem;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
 
-		.section-first h2 {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 1rem;
-			text-align: center;
-			align-items: center;
-			font-size: 1.5rem;
-		}
+	.selection-bar h2 {
+		font-size: 2em;
+		text-decoration: none;
+	}
 
-		.section-first p {
-			display: flex;
-			justify-content: center;
-			flex-wrap: nowrap;
-			gap: 1rem;
-			text-align: center;
-			align-items: center;
-			font-size: 1.5rem;
-		}
+	.selection-bar h3 {
+		font-size: 1.5em;
+	}
 
-		.section-first {
-			display: flex; /* Enable horizontal alignment */
-			align-items: center; /* Vertically align the image and fieldset */
-			justify-content: space-between; /* Space out the image and fieldset */
-			gap: 20px; /* Add spacing between the image and fieldset */
-			padding: 20px; /* Add padding around the section */
-		}
+	/* Space Bar */
+	.space-bar {
+		width: 100%;
+		height: 10px;
+		margin-top: 10px;
+		border-radius: 2%;
+		margin-bottom: 10px;
+	}
 
-		.section-first-img img {
-			max-width: 300px; /* Adjust the image width */
-			height: auto; /* Maintain the image's aspect ratio */
-			object-fit: cover; /* Crop the image if needed */
-			border-radius: 10px; /* Optional: Add rounded corners */
-		}
+	/* Section */
+	.section-first {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		text-align: center;
+		align-items: center;
+		padding: 20px;
+	}
 
-		.copy-container {
-			flex: 1; /* Allow the fieldset to take up remaining space */
-			max-width: 400px; /* Set a max width for the fieldset */
-			padding: 20px; /* Add padding inside the fieldset */
-		}
+	.section-first h2 {
+		font-size: 1.5rem;
+	}
 
-		.copy-container h2 {
-			font-size: 1.5rem; /* Adjust heading size */
-			margin-bottom: 10px; /* Add space below the heading */
-		}
+	.section-first p {
+		font-size: 1.5rem;
+		line-height: 1.5;
+	}
 
-		.copy-container p {
-			font-size: 1.5rem; /* Adjust paragraph size */
-			line-height: 1.5; /* Improve readability */
-		}
+	/* First Section with Image and Content */
+	.section-first {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
 
-		.logo-img-legend img {
-			max-width: 100px; /* Restrict the logo size */
-			height: auto; /* Maintain aspect ratio */
-		}
+	.section-first-img img {
+		max-width: 300px;
+		height: auto;
+		object-fit: cover;
+		border-radius: 10px;
+	}
 
-		fieldset {
-			flex: 1; /* Allow the fieldset to grow and fill available space */
-			border: none;
-			margin: 0.5rem; /* Add spacing to prevent overlap */
-			position: relative; /* Needed for positioning the legend */
-			padding-top: 1.5rem; /* Add padding to make space for the legend */
-			text-align: center; /* Center align the text */
-		}
+	.copy-container {
+		flex: 1;
+		max-width: 400px;
+		padding: 20px;
+	}
 
-		legend {
-			display: flex;
-			flex-direction: column; /* Stack image and text */
-			align-items: center;
-			text-align: center;
-			gap: 0.5rem;
-			border: none;
-			font-size: 5rem;
-			padding: 10px 10px;
-			background-color: white;
-			font-family: "Playfair Display", serif;
-			font-optical-sizing: auto;
-			font-weight: 900;
-			font-style: normal;
-			border-radius: 5%;
-		}
+	.copy-container h2 {
+		font-size: 1.5rem;
+		margin-bottom: 10px;
+	}
 
-		legend img {
-			width: 5rem;
-			height: auto;
-		}
+	/* Legend for Fieldset */
+	legend {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.5rem;
+		font-size: 5rem;
+		padding: 10px;
+		background-color: white;
+		font-family: "Playfair Display", serif;
+		font-weight: 900;
+		border-radius: 5%;
+	}
 
-		img {
-			width: 100%; /* Make the image responsive */
-			height: auto; /* Maintain aspect ratio */
-		}
+	legend img {
+		width: 5rem;
+		height: auto;
+	}
 
-		.button {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%; /* Allow the button container to take full width */
-			text-align: center;
-		}
+	fieldset {
+		flex: 1;
+		border: none;
+		margin: 0.5rem;
+		position: relative;
+		padding-top: 1.5rem;
+		text-align: center;
+	}
 
-		.button button {
-			font-size: 2rem;
-			padding: 15px 30px;
-			background-color: #ff5733;
-			color: white;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-			transition: transform 0.3s, box-shadow 0.3s;
-			width: auto;
-			max-width: none; /* Remove max-width restriction */
-		}
+	/* Footer */
+	.footer {
+		background-color: #333;
+		color: white;
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		text-align: center;
+	}
 
-		ul li {
-			font-size: 1.5rem; /* Adjust the size as needed */
-			line-height: 1.5; /* Optional: Improves readability */
-		}
+	.footer-column {
+		flex: 1;
+		min-width: 250px;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
 
+	.footer-column h3 {
+		margin-bottom: 10px;
+		font-size: 1.2rem;
+		border-bottom: 2px solid white;
+		padding-bottom: 5px;
+	}
+
+	.footer-column ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.footer-column ul li a {
+		color: white;
+		text-decoration: none;
+		font-size: 1rem;
+	}
+
+	.footer-column ul li a:hover {
+		text-decoration: underline;
+	}
+
+	.footer-column .button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding-top: 20px;
+	}
+
+	/* Button Styling */
+	.button button {
+		font-size: 2rem;
+		padding: 15px 30px;
+		background-color: #ff5733;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s, box-shadow 0.3s;
+		width: auto;
+		max-width: none;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
 		.footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between; /* Ensures equal spacing between columns */
-  align-items: flex-start;
-  flex-wrap: wrap;
-  text-align: center;
-}
+			flex-direction: column;
+			align-items: center;
+		}
 
-/* Footer Column Styling */
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: center; /* Centers text inside each column */
-}
+		.footer-column {
+			text-align: center;
+			width: 100%;
+		}
 
-/* Button Styling inside Footer Column */
-.footer-column .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-top: 20px;
-}
+		.footer-column h3 {
+			font-size: 1.5rem;
+		}
 
-/* Footer Column Headers */
-.footer-column h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  border-bottom: 2px solid white;
-  padding-bottom: 5px;
-  text-align: center;
-}
+		.footer-column ul li a {
+			font-size: 1.2rem;
+		}
 
-/* Footer Column Links */
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
+		.footer-column .button {
+			width: 100%;
+			font-size: 1.2rem;
+		}
+	}
 
-.footer-column ul li {
-  margin-bottom: 8px;
-}
+	@media (max-width: 480px) {
+		.footer {
+			padding: 15px;
+		}
 
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
+		.footer-column {
+			width: 100%;
+			text-align: center;
+		}
 
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column; /* Stack footer content vertically */
-    align-items: center; /* Center the items horizontally */
-  }
+		.footer-column h3 {
+			font-size: 1.8rem;
+		}
 
-  .footer-column {
-    text-align: center; /* Ensure text is centered in columns */
-    margin-bottom: 20px; /* Add spacing between columns */
-    width: 100%; /* Make columns full width */
-	  
-  }
+		.footer-column ul li a {
+			font-size: 1.4rem;
+		}
 
-  .footer-column h3 {
-    font-size: 1.5rem; /* Increase font size */
-  }
-
-  .footer-column ul li a {
-    font-size: 1.2rem; /* Increase font size of links */
-  }
-
-  .footer-column .button {
-    width: 100%; /* Make the button width a bit narrower */
-    font-size: 1.2rem; /* Increase button font size */
-  }
-}
-
-/* Media Query for Extra Small Screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .footer {
-    padding: 15px;
-  }
-
-  .footer-column {
-    width: 100%; /* Make each column take full width on very small screens */
-    text-align: center; /* Keep text centered */
-  }
-
-  .footer-column h3 {
-    font-size: 1.8rem; /* Increase header font size */
-  }
-
-  .footer-column ul li a {
-    font-size: 1.4rem; /* Larger font size for links */
-  }
-
-  .footer-column .button {
-    width: 100%; /* Button takes full width */
-    font-size: 1.5rem; /* Increase button font size */
-  }
-}
-		
-	</style>
+		.footer-column .button {
+			width: 100%;
+			font-size: 1.5rem;
+		}
+	}
+</style>
 </head>
 
 <body>
@@ -322,7 +278,7 @@
 	<div class="selection-bar">
 		<div>
 			<a href="lost.html" target="_blank"><h2>Do You Ever Feel Lost?</h2></a>
-			<h3>Lets find your purpose</h3>
+			<h3>Let's find your purpose</h3>
 		</div>
 		<div>
 			<a href="another-way.html" target="_blank"><h2>What If There’s Another Way?</h2></a>
@@ -333,103 +289,71 @@
 			<h3>Workshops and Courses</h3>
 		</div>
 	</div>
-	
-	
+
 	<div class="space-bar"></div>
 	<div class="space-bar"></div>
-	
-	
-	
+
 	<div class="section-first">
-		
 		<div class="section-first-img">
-			<img src="owenedit4.jpg">
+			<img src="owenedit4.jpg" alt="Owen Image">
 		</div>
 		
-			<fieldset class="copy-container">
-			  <legend class="logo-img-legend">
-				<img src="logo-one.png" alt="logo">
-			  </legend>
-		<div>
-			<h2>Are you stuck in cycles of old patterns or experiences, wondering why things never change?</h2>
-			  <p>I know this because I’ve been there. At 16, I left school to begin my journey of self-actualization, diving into everything I speak about now. By 17, I was living in New Mexico, learning sacred teachings and assisting in ceremonies. My path has been one of forging strength, connection, and clarity—and I’ve discovered that you have that same power within you.</p>
-		</div>
-			</fieldset>
-		
-	</div>
-	
-	
-	<div class="space-bar"></div>
-	<div class="space-bar"></div>
-	
-	
-	<div class="section-first">
-		
-		<fieldset>
-			<legend><img src="logo-one.png" alt="logo"></legend>
-		<div>
-			
-		<h2>What If There’s Another Way?</h2>
-			<p>I am Owen, and my name means Young Warrior. At 19, my journey has been anything but ordinary. I’ve dedicated my life to paving my own path and embodying what it means to be a warrior—facing challenges, breaking chains, and creating a life that reflects my worth. Through my brand, I invite you to do the same. My merch line reflects this energy:	“Have a Beautiful Now” reminds you to find beauty in every moment, no matter where you are in life.
-</p>
-		</div>
-			</fieldset>
-		<div class="section-first-img">
-			<img src="owenedit3.jpg">
-		</div>
-	</div>
-	
-	
-	
-	
-	
-	<div class="space-bar"></div>
-	<div class="space-bar"></div>
-	
-	
-	<div class="section-first">
-			<div class="section-first-img">
-			<img src="owenedit2.jpg">
-			</div>
-			<fieldset>
-				<legend><img src="logo-one.png" alt="logo"></legend>
+		<fieldset class="copy-container">
+			<legend class="logo-img-legend">
+				<img src="logo-one.png" alt="Logo">
+			</legend>
 			<div>
-				<h2>Real change start here...</h2>
-				
-					<ul>
-						<li>What if the world isn’t against you, but simply reflecting the energy you’re putting out?</li>
-						
-							<li>Imagine feeling aligned with your true worth, clear in your purpose, and open to the blessings the universe wants to send you.</li>
-							<li>Picture yourself free of old cycles and ready to receive the joy, abundance, and love you truly deserve.</li>
-							<li>Energy doesn’t lie—when you shift within, the world around you begins to shift too.</li>
-					</ul>
-				
+				<h2>Are you stuck in cycles of old patterns or experiences, wondering why things never change?</h2>
+				<p>I know this because I’ve been there. At 16, I left school to begin my journey of self-actualization, diving into everything I speak about now...</p>
 			</div>
 		</fieldset>
 	</div>
+
+	<div class="space-bar"></div>
+	<div class="space-bar"></div>
+
+	<div class="section-first">
+		<fieldset>
+			<legend><img src="logo-one.png" alt="Logo"></legend>
+			<div>
+				<h2>What If There’s Another Way?</h2>
+				<p>I am Owen, and my name means Young Warrior. At 19, my journey has been anything but ordinary...</p>
+			</div>
+		</fieldset>
+		<div class="section-first-img">
+			<img src="owenedit4.jpg" alt="Owen Image">
+		</div>
+	</div>
+
 	<footer class="footer">
-    <div class="footer-column">
-        <div class="button">
-            <a href="index.html#form-style" target="_blank"><button>Start Now</button></a>
-        </div>
-    </div>
-    <div class="footer-column">
-        <h3>About Us</h3>
-        <ul>
-            <li><a href="contentpage.html" target="_blank">My Story</a></li>
-            <li><a href="contentpage.html" target="_blank">Mission</a></li>
-        </ul>
-    </div>
-    <div class="footer-column">
-        <h3>Contact</h3>
-        <ul>
-            <li>Email: <a href="mailto:info@youngwarriors.com">info@youngwarriors.com</a></li>
-            <li><a href="https://www.tiktok.com/@youngwarriorss8" target="_blank">tiktok.com/youngwarriorss8</a></li>
-            <li><a href="https://www.instagram.com/youngwarriorss8" target="_blank">instagram.com/youngwarriorss8</a></li>
-            <li>Phone: <a href="tel:+12392581014">+1 (239)-258-1014</a></li>
-        </ul>
-    </div>
-</footer>
-	 
+		<div class="footer-column">
+			<h3>About Me</h3>
+			<ul>
+				<li><a href="about.html">Who Am I?</a></li>
+				<li><a href="journey.html">My Journey</a></li>
+			</ul>
+		</div>
+
+		<div class="footer-column">
+			<h3>Services</h3>
+			<ul>
+				<li><a href="workshops.html">Workshops</a></li>
+				<li><a href="mentorship.html">Mentorship</a></li>
+			</ul>
+		</div>
+
+		<div class="footer-column">
+			<h3>Contact</h3>
+			<ul>
+				<li><a href="contact.html">Get in Touch</a></li>
+			</ul>
+		</div>
+
+		<div class="footer-column">
+			<div class="button">
+				<button>Book Now</button>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

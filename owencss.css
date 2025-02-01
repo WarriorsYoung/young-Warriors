@@ -442,7 +442,7 @@ button:hover {
     visibility: visible !important; /* Ensure it's visible */
   scroll-behavior: smooth;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: red;
   
   height: auto;
  max-height: none; /* Remove constraints */

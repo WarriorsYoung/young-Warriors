@@ -523,33 +523,37 @@ button:hover {
 	
 	.scroll-container {
         display: flex;
-        flex-wrap: nowrap; /* Keep videos in a single row */
-        justify-content: flex-start; /* Align items to the left */
-        align-items: center; /* Center items vertically */
-        gap: 10px; /* Space between videos */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        overflow-y: hidden; /* Prevent vertical scrolling */
-        max-height: 250px; /* Maintain container height */
-        width: 100%; /* Ensure container spans the full width */
-        box-sizing: border-box; /* Include padding in width/height */
-        padding: 5px; /* Adjust padding for small screens */
+        flex-wrap: nowrap;  /* Keep videos in a single row */
+        overflow-x: auto;    /* Enable horizontal scrolling */
+        overflow-y: hidden;  /* Prevent vertical scrolling */
+        gap: 10px;           /* Space between videos */
+        padding: 10px;       /* Adjust padding */
+        max-height: 250px;   /* Prevent container from collapsing */
+        width: 100%;         /* Full width */
+        box-sizing: border-box; /* Include padding in width */
+        scroll-snap-type: x mandatory; /* Smooth scrolling */
+        -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
     }
 
 	
   	.scroll-container .block {
-    		flex: 0 0 100%; /* Force each video to take full row width */
+    		flex: 0 0 auto; /* Force each video to take full row width */
         	margin: 10px;
         	box-sizing: border-box;
+		 min-width: 150px;    /* Ensure each video has a minimum width */
+        max-width: 100%;     /* Prevent stretching */
   	}
 	
 	
 
-	    .scroll-container .block video {
-        width: auto; /* Ensure videos keep their natural width */
-        max-width: 100%; /* Prevent videos from overflowing horizontally */
-        max-height: 200px; /* Maintain aspect ratio and height constraints */
-        border-radius: 10px; /* Adjust styling for small screens */
+	        .scroll-container .block video {
+        width: 100%;         /* Make video responsive */
+        max-width: 180px;    /* Set a max size for consistency */
+        max-height: 200px;   /* Ensure aspect ratio */
+        border-radius: 10px; /* Keep styling clean */
+        display: block;      /* Prevent inline spacing issues */
     }
+
 
 
 	.button {
@@ -635,16 +639,16 @@ button:hover {
 
 			.scroll-container {
         display: flex;
-        flex-wrap: nowrap; /* Keep videos in a single row */
-        justify-content: flex-start; /* Align items to the left */
-        align-items: center; /* Center items vertically */
-        gap: 10px; /* Space between videos */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        overflow-y: hidden; /* Prevent vertical scrolling */
-        max-height: 250px; /* Maintain container height */
-        width: 100%; /* Ensure container spans the full width */
-        box-sizing: border-box; /* Include padding in width/height */
-        padding: 5px; /* Adjust padding for small screens */
+        flex-wrap: nowrap;  /* Keep videos in a single row */
+        overflow-x: auto;    /* Enable horizontal scrolling */
+        overflow-y: hidden;  /* Prevent vertical scrolling */
+        gap: 10px;           /* Space between videos */
+        padding: 10px;       /* Adjust padding */
+        max-height: 250px;   /* Prevent container from collapsing */
+        width: 100%;         /* Full width */
+        box-sizing: border-box; /* Include padding in width */
+        scroll-snap-type: x mandatory; /* Smooth scrolling */
+        -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
     }
 
 	

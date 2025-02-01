@@ -43,29 +43,23 @@
 	
 	
 	<div class="scrollable-slider">
-	  <div id="testimony" class="scroll-container">
-		<div class="block">
-		  <video src="testimony1.mov" controls poster="posterimg.jpg" playsinline muted></video>
-
-
-
-		</div>
-		<div class="block">
-		  <video src="testimony1.mov" controls poster="posterimg2.jpg" playsinline muted></video>
-
-		</div>
-		
-		
-		
-	  </div>
+  <div id="testimony" class="scroll-container">
+    <div class="block">
+      <video src="testimony1.mov" controls poster="posterimg.jpg" playsinline muted></video>
+    </div>
+    <div class="block">
+      <video src="testimony2.mov" controls poster="posterimg2.jpg" playsinline muted></video>
+    </div>
+  </div>
 </div>
 
-
-	<div id="imageModal" class="modal">
-		<span class="close">&times;</span>
-		<video class="modal-content" id="modalVideo" controls></video>
-		<p id="modalCaption"></p>
-	</div>
+<!-- Modal for Video -->
+<div id="videoModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <video id="modalVideo" controls playsinline muted></video>
+  </div>
+</div>
 
 
     <!-- Dropdown for Services -->
@@ -401,32 +395,37 @@ function calculatePrice(sessionType, sessionCount) {
     return sessionCount * pricingInfo.single;
 }
 
-// Video modal functionality
 const videos = document.querySelectorAll('.scroll-container .block video');
-const modal = document.getElementById('imageModal');
+
+// Get the modal and video elements
+const modal = document.getElementById('videoModal');
 const modalVideo = document.getElementById('modalVideo');
 const closeBtn = document.querySelector('.modal .close');
 
+// When any video is clicked, open the modal and play the clicked video in the modal
 videos.forEach(video => {
   video.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalVideo.src = video.src; // Set the modal video source
-    modalVideo.play();
+    modal.style.display = 'block'; // Show the modal
+    modalVideo.src = video.src; // Set the modal video source to clicked video
+    modalVideo.play(); // Play the video in the modal
   });
 });
 
+// Close modal functionality
 closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-  modalVideo.pause();
-  modalVideo.src = ''; // Stop video
+  modal.style.display = 'none'; // Hide the modal
+  modalVideo.pause(); // Pause the video
+  modalVideo.currentTime = 0; // Reset video to the start
+  modalVideo.src = ''; // Clear the video source
 });
 
-// Close modal when clicking outside video
+// Close modal when clicking outside of the video
 window.addEventListener('click', (event) => {
   if (event.target === modal) {
-    modal.style.display = 'none';
-    modalVideo.pause();
-    modalVideo.src = ''; // Stop video
+    modal.style.display = 'none'; // Hide the modal
+    modalVideo.pause(); // Pause the video
+    modalVideo.currentTime = 0; // Reset video to the start
+    modalVideo.src = ''; // Clear the video source
   }
 });
 

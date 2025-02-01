@@ -572,7 +572,7 @@ button:hover {
         max-height: 200px;   /* Ensure aspect ratio */
         border-radius: 10px; /* Keep styling clean */
         display: block;      /* Prevent inline spacing issues */
-			border: 2px solid blue;
+			border: 2px solid red;
 			height: auto !important;
 			position: relative;
     z-index: 10; /* Bring it to the front */

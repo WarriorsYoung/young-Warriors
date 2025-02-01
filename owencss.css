@@ -387,17 +387,7 @@ button:hover {
    
 
 
-.scroll-container .block video {
-  width: 200px; /* Adjust to preferred size */
-  height: 200px; 
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 15px;
-}
 
-.scroll-container .block video:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
 
 /* Modal styling */
 .modal {
@@ -454,7 +444,8 @@ button:hover {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   
-  height: 15rem;
+  height: auto;
+ max-height: none; /* Remove constraints */
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -490,7 +481,17 @@ button:hover {
 .scroll-container video:hover {
   transform: scale(1.05);
 }
+.scroll-container .block video {
+  width: 200px; /* Adjust to preferred size */
+  height: 200px; 
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
+}
 
+.scroll-container .block video:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
 #send-button {
     display: inline-block; /* Make sure it takes up space in the layout */
     position: relative; /* Ensure it's positioned correctly */

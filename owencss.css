@@ -522,6 +522,7 @@ button:hover {
 
 	
 	.scroll-container {
+	background-color: red;
         display: flex;
         flex-wrap: nowrap;  /* Keep videos in a single row */
         overflow-x: auto;    /* Enable horizontal scrolling */

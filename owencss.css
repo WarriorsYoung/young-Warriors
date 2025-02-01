@@ -490,6 +490,9 @@ button:hover {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   border-radius: 15px;
+	opacity: 1 !important;
+    visibility: visible !important;
+
 }
 
 .scroll-container .block video:hover {

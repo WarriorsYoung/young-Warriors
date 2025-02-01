@@ -446,9 +446,10 @@ button:hover {
 
 /* Scrollable container styles */
 .scroll-container {
-  display: flex;
-  overflow-x: auto;
   
+   overflow-x: auto !important; /* Force horizontal scroll */
+    display: flex !important; /* Ensure it displays */
+    visibility: visible !important; /* Ensure it's visible */
   scroll-behavior: smooth;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);

@@ -528,6 +528,17 @@ button:hover {
 
 @media (max-width: 480px) {
 
+	 #form-style {
+        margin: 0 10%; /* Reduce side margins to make it wider */
+        width: 80%; /* Set width to 80% of the screen */
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    #form-style input, 
+    #form-style textarea {
+        max-width: none; /* Remove max-width restriction */
+        width: 90%; /* Make input fields take most of the form's width */
+    }
 	
 	.scroll-container {
 	

@@ -44,14 +44,23 @@
     margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
 }
 
-.selection-bar > div {
+..selection-bar > div {
     flex: 1;
     min-width: 200px;
     max-width: 300px;
     padding: 1rem;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    position: relative; /* Needed for absolute positioning if required */
+    position: relative; /* Add this to allow absolute positioning inside */
+}
+
+.arrow-icon {
+    width: 50px; /* Adjust size as needed */
+    display: block;
+    position: absolute; /* Position absolutely within the parent div */
+    bottom: 10px; /* Adjust as needed to position it closer to the bottom */
+    left: 50%; /* Center the arrow horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
 }
 
 .selection-bar h2 {

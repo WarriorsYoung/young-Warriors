@@ -44,7 +44,7 @@
     margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
 }
 
-..selection-bar > div {
+.selection-bar > div {
     flex: 1;
     min-width: 200px;
     max-width: 300px;
@@ -61,11 +61,13 @@
     bottom: 10px; /* Adjust as needed to position it closer to the bottom */
     left: 50%; /* Center the arrow horizontally */
     transform: translateX(-50%); /* Centering adjustment */
+	 margin: 10px auto 0 auto; /* Centers the arrow */
 }
 
 .selection-bar h2 {
     font-size: 2em;
     text-decoration: none;
+	justify-content: center;
 }
 
 .selection-bar h3 {
@@ -73,11 +75,7 @@
     margin-bottom: 10px;
 }
 
-.arrow-icon {
-    width: 50px; /* Adjust size as needed */
-    display: block;
-    margin: 10px auto 0 auto; /* Centers the arrow */
-}
+
 
 
 		.space-bar {

@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+			font-size: 16px;
+		}
+		
+		 .nav-bar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        padding: 10px 0;
+		height: 50px;
+		box-sizing: border-box;
+		}
+
+    .nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+		.selection-bar {
+			width: 100vw;
+			display: flex;
+			justify-content: space-around;
+			align-items: stretch;
+			text-align: center;
+			gap: 1rem;
+			margin-top: calc(50px + 10px); /* Height of the nav-bar + 10px padding */
+		}
+		
+		.selection-bar > div {
+			flex: 1; /* Make all child divs grow equally */
+			min-width: 200px; /* Ensure a minimum width for smaller screens */
+			max-width: 300px; /* Optional: Set a max width to control size */
+			padding: 1rem; /* Add internal spacing for content */
+			border: 1px solid #ccc; /* Optional: Add borders for better visualization */
+			box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+		}
+		
+		
+		
+		.space-bar {
+			width: 100vw;
+			height: 10px;
+			background-color: white;
+			margin-top: 10px;
+			border-radius: 2%;
+			margin-bottom: 10px;
+		}
+		
+		/* bullet point */
+		.section-first {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			gap: 2rem;
+			text-align: start;
+			align-items: center;
+		}
+		
+		.section-first h2 {
+			text-align: center;
+			align-items: center;
+			font-size: 2.25rem;
+		}
+		
+		
+		
+		.section-first ul {
+			list-style: none; /* Remove default bullet points */
+			padding: 0; /* Remove default padding */
+			font-size: 2rem;
+			line-height: 1.6; 
+		}
+		.section-first ul li {
+			position: relative;
+			padding-left: 2.5rem; /* Add space for the infinity symbol */
+			margin-bottom: 10px;
+			font-size: 2rem;
+			
+		}
+		
+		
+		
+		.section-first ul li::before {
+			content: "∞"; /* Add infinity symbol */
+			position: absolute;
+			left: 0; /* Position the symbol to the left of the text */
+			transform: translateY(-50%);
+			top: 50%;
+			font-size: 2rem; /* Adjust size as needed */
+			color: #000; /* Set the color of the symbol */
+		}
+		/* infinity symbol */
+		
+		.section-first-img {
+			width: 50%;
+			flex-shrink: 0; /* Prevent shrinking of the image */
+			align-content: center;
+			
+		}
+		
+		.section-first-img img{
+			border-radius: 15px;
+			
+		}
+		
+		.second-list ul li::before {
+			content: "X"; /* X symbol */
+			color: black; /* Optional: Change color for differentiation */
+		}
+		.quote {
+			font-size: 3rem;
+			font-weight: bolder;
+			padding: 0 10px;
+		}
+
+		fieldset {
+			flex: 1; /* Allow the fieldset to grow and fill available space */
+			
+			margin: 0.5rem; /* Add spacing to prevent overlap */
+			position: relative; /* Needed for positioning the legend */
+			padding-top: 1.5rem; /* Add padding to make space for the legend */
+			text-align: center; /* Center align the text */
+			border: none;
+			text-align: start;
+		}
+		
+		
+		legend img {
+			width: 5rem;
+			height: auto;
+			
+		}
+
+		img {
+			width: 100%; /* Make the image responsive */
+			height: auto; /* Maintain aspect ratio */
+		}
+		
+		.section-first a:hover {
+			color: blue; /* Change text color to blue */
+			
+		}
+		
+		a {
+			color: black; /* Default color for links */
+			text-decoration: none; /* Remove underline */
+			font-size: 18px; /* Adjust font size */
+			padding: 10px 20px;
+		}
+		
+		
+.section-first div p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left */
+	padding: 0 20px;
+}
+
+ 		
+		@media (max-width: 480px) {
+    .section-first {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .section-first ul {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .section-first ul li {
+        padding-left: 0; /* Remove space for the infinity symbol */
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+
+    .section-first-img {
+        width: 100%; /* Make the image take full width */
+        margin-top: 1rem; /* Add some space between text and image */
+    }
+
+    .section-first-img img {
+        width: 100%; /* Ensure the image takes full width of its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+			
+	
+}
+		
+		@media (max-width: 768px) {
+			.nav-bar {
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Align items to the start */
+				
+				position: static;
+    			top: 0;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.8);
+				color: white;
+				height: auto;
+				 
+    }
+			
+
+    .nav-bar a {
+        
+        
+	    margin: 5px 0; /* Stack links with vertical spacing */
+        font-size: 25px; /* Slightly increase font size for readability */
+    }
+			}

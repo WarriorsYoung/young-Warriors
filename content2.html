@@ -131,6 +131,32 @@
 		ul, li {
 			font-size: 1.5rem;
 		}
+		.footer {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;  /* Ensure equal spacing between columns */
+			align-items: flex-start;
+			flex-wrap: wrap;
+			text-align: center;
+		}
+
+		.footer-column {
+			flex: 1;
+			min-width: 250px;
+			padding: 10px;
+			margin-bottom: 20px;
+			text-align: center;  /* Center text inside each column */
+		}
+
+		.footer-column .button {
+			display: flex;
+			justify-content: center;  /* Center the button horizontally */
+			align-items: center;      /* Center the button vertically */
+			width: 100%;              /* Ensure button takes the full width */
+			padding-top: 20px;        /* Optional spacing for button */
+		}
 	</style>
 </head>
 

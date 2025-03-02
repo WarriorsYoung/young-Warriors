@@ -119,6 +119,20 @@
     }
 
     /* Button Styling */
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
 
  
 	.main {

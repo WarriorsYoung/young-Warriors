@@ -1,4 +1,4 @@
-@charset "UTF-8";
+,@charset "UTF-8";
 /* CSS Document */
 
 
@@ -331,7 +331,8 @@ button:hover {
 
 		}
 
-		.form-container h1 {
+		.form-container h1,
+		.main h1 {
 			font-size: 30px; /* Change to your desired size */
 		}
  		
